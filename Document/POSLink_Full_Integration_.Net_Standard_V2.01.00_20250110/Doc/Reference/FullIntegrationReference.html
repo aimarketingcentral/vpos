@@ -1,0 +1,4185 @@
+<html>
+  <head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>FullIntegrationReference</title>
+		<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+	  <style>
+		pre {
+		    counter-reset: line-numbering;
+		    border: solid 1px #d9d9d9;
+		    border-radius: 0;
+		    background: #fff;
+		    padding: 0;
+		    line-height: 23px;
+		    margin-bottom: 30px;
+		    white-space: pre;
+		    overflow-x: auto;
+		    word-break: inherit;
+		    word-wrap: inherit;
+		}
+
+		pre a::before {
+		  content: counter(line-numbering);
+		  counter-increment: line-numbering;
+		  padding-right: 1em; /* space after numbers */
+		  width: 25px;
+		  text-align: right;
+		  opacity: 0.7;
+		  display: inline-block;
+		  color: #aaa;
+		  background: #eee;
+		  margin-right: 16px;
+		  padding: 2px 10px;
+		  font-size: 13px;
+		  -webkit-touch-callout: none;
+		  -webkit-user-select: none;
+		  -khtml-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+
+		pre a:first-of-type::before {
+		  padding-top: 10px;
+		}
+
+		pre a:last-of-type::before {
+		  padding-bottom: 10px;
+		}
+
+		pre a:only-of-type::before {
+		  padding: 10px;
+		}
+
+		.highlight { background-color: #ffffcc } /* RIGHT */
+		</style>
+  </head>
+  <body>
+	  <div>
+				<div style='width:25%;'>
+						<ul id="tree" class="ztree" style='width:100%'>
+
+						</ul>
+				</div>
+        <div id='readme' style='width:70%;margin-left:20%;'>
+          	<article class='markdown-body'>
+            	<div style="color:black;"><font size="6"><strong>Copyright Notice</strong></font></div>
+
+<p>Copyright © 2022, PAX Technology, Inc. All rights reserved</p>
+<p>The Programs (which include both the software and documentation) contain proprietary information; they are provided under a license agreement containing restrictions on use and disclosure and are also protected by copyright, patent, and other intellectual and industrial property laws. Reverse engineering, disassembly, or de-compilation of the Programs, except to the extent required to obtain interoperability with other independently created software or as specified by law, is prohibited.</p>
+<p>The information contained in this document is subject to change without notice. If you find any problems in the documentation, please report them to us in writing. This document is not warranted to be error-free. Except as may be expressly permitted in your license agreement for these Programs, no part of these Programs may be reproduced or transmitted in any form or by any means, electronic or mechanical, for any purposes.</p>
+<p>Security Notice: No part of this publication may be copied, distributed, stored in a retrieval system, translated into any human or computer language, transmitted, in any form or by any means, without the prior written consent of PAX Technology, Inc.</p>
+<p>PAX Technology, Inc. is a registered trademark of PAX Technology, Inc. and/or its affiliates. Other names may be trademarks of their respective owners.</p>
+<h1 id="revision-history">REVISION HISTORY</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Date</th>
+<th style="text-align:left">Version</th>
+<th style="text-align:left">Author</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">2023/02/23</td>
+<td style="text-align:left">V1.00.00</td>
+<td style="text-align:left">Ben.J</td>
+<td style="text-align:left">1. Add Icon Image to Terminal Image Formats. 2. Add some parameters to Configurable Parameter Definition.</td>
+</tr>
+<tr>
+<td style="text-align:left">2022/08/31</td>
+<td style="text-align:left">V1.00.00</td>
+<td style="text-align:left">Jerry.Z</td>
+<td style="text-align:left">The first version</td>
+</tr>
+</tbody>
+</table>
+<h1 id="introduction">Introduction</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This document is aimed to provide the information that may be used in programming. This is in addition to the API guide. It can be consulted when the relevant information cannot be found in the API guide.</p>
+<h2 id="intended-audience-and-reading-suggestions">Intended Audience and Reading Suggestions</h2>
+<p>The following persons should pay attention to this document.</p>
+<ul>
+<li>PC/ECR System Developer</li>
+<li>Terminal Developer</li>
+<li>Tester/QA 
+<a id="id.dataAttribute"></a><h1 id="data-attribute">Data Attribute</h1>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Modifier</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">n</td>
+<td style="text-align:left">Numeric digits, 0 through 9</td>
+</tr>
+<tr>
+<td style="text-align:center">a</td>
+<td style="text-align:left">Alphabetic characters A-Z and a-z</td>
+</tr>
+<tr>
+<td style="text-align:center">s</td>
+<td style="text-align:left">Special characters, other printable characters</td>
+</tr>
+<tr>
+<td style="text-align:center">an</td>
+<td style="text-align:left">Alphabetic, numeric</td>
+</tr>
+<tr>
+<td style="text-align:center">ans</td>
+<td style="text-align:left">Alphabetic, numeric, and special characters</td>
+</tr>
+<tr>
+<td style="text-align:center">YYYY</td>
+<td style="text-align:left">Year, 0000 through 9999</td>
+</tr>
+<tr>
+<td style="text-align:center">YY</td>
+<td style="text-align:left">Year, 00 through 99</td>
+</tr>
+<tr>
+<td style="text-align:center">MM</td>
+<td style="text-align:left">Month, 01 through 12</td>
+</tr>
+<tr>
+<td style="text-align:center">DD</td>
+<td style="text-align:left">Day, 01 through 31</td>
+</tr>
+<tr>
+<td style="text-align:center">hh</td>
+<td style="text-align:left">Hour, 00 through 23</td>
+</tr>
+<tr>
+<td style="text-align:center">mm</td>
+<td style="text-align:left">Minute, 00 through 59</td>
+</tr>
+<tr>
+<td style="text-align:center">ss</td>
+<td style="text-align:left">Second, 00 through 59</td>
+</tr>
+<tr>
+<td style="text-align:center">digits</td>
+<td style="text-align:left">The fixed length <br> Example: <br> n6 indicates the fixed length numeric field of 6 digits. <br> an11 indicates the fixed length alpha/numeric field of 11 characters.</td>
+</tr>
+<tr>
+<td style="text-align:center">…digits</td>
+<td style="text-align:left">The variable length, with the maximum specified by the digit <br> Example:  <br> n…6 indicates a variable length numeric field of 0 – 6 digits. <br> an…11 indicates a variable length alpha/numeric field of 0 – 11 characters.</td>
+</tr>
+<tr>
+<td style="text-align:center">var</td>
+<td style="text-align:left">The length is variable.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Modifier</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Mandatory, this field must be set.</td>
+</tr>
+<tr>
+<td style="text-align:center">C</td>
+<td style="text-align:left">Conditional, the field needs to be set only under certain conditions.</td>
+</tr>
+<tr>
+<td style="text-align:center">O</td>
+<td style="text-align:left">Optional, this field is optional.</td>
+</tr>
+</tbody>
+</table>
+<p>Please Note: The attribute is only for reference. The actual length depends on delimiters.</p>
+<h1 id="configurable-parameter-definition">Configurable Parameter Definition</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:center">Length</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">R/W</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">demoMode</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">N = Not in demo mode<br>Y = In demo Mode</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">idleMsg</td>
+<td style="text-align:center">16</td>
+<td style="text-align:left">After terminal receives command &quot;A00&quot; this message displays on POS during idle state.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">MID</td>
+<td style="text-align:center">20</td>
+<td style="text-align:left">Get MID</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">TID</td>
+<td style="text-align:center">20</td>
+<td style="text-align:left">Get TID</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">batchNo</td>
+<td style="text-align:center">6</td>
+<td style="text-align:left">Get Batch Number, needs EDCType.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">accountFlag</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">0 = Terminal returns last 4 digits of card number.<br>1 = Terminal returns entire card number (For non-CREDIT/DEBIT/EBT/CASH transactions).</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">serverAddr</td>
+<td style="text-align:center">15</td>
+<td style="text-align:left">IP address when terminal acts as a server.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">amountOrder</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">For partially approved transactions, terminal responds to ECR with additional amount required in their specific listed orders.<br>Valid values are:<br>1: Merchant fee&gt; tip&gt; cash back<br>2: Merchant fee&gt; cash back&gt; tip<br>3: Tip&gt; merchant fee&gt;cash back<br>4: Tip&gt; cash back&gt; merchant fee<br>5: Cash back&gt; merchant fee&gt; tip<br>6: Cash back&gt; tip&gt; merchant fee</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">menuTimeout</td>
+<td style="text-align:center">4</td>
+<td style="text-align:left">Menu timeout in 100ms.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">industry</td>
+<td style="text-align:center">16</td>
+<td style="text-align:left">Industry type values: &quot;RETAIL,&quot; &quot;RESTAURANT,&quot; &quot;LODGING.&quot;</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">hrType</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Health report type:<br>&quot;N&quot; = No automatic health report.<br>&quot;T&quot; = Automatic health report at specified time.<br>&quot;I&quot; = Automatic health report in specified interval.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">hrTime</td>
+<td style="text-align:center">4</td>
+<td style="text-align:left">Automatic health report time. In HHMM format.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">hrInterval</td>
+<td style="text-align:center">8</td>
+<td style="text-align:left">Automatic health report interval.<br>In 100ms. Max value is &quot;99999999&quot;.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">commType</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">The communication type between terminal and ECR/PC.<br>&quot;U&quot;: UART(COM1)<br>&quot;B&quot;: USB<br>&quot;2&quot;: COM2(conditional)<br>&quot;E&quot;: Ethernet<br>&quot;T&quot;: Bluetooth</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">commProtocolType</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">The communication protocol type based on Ethernet.<br>&quot;E&quot;: TCP/IP (Default)<br>&quot;H&quot;: HTTP GET<br>&quot;S&quot;: SSL<br>&quot;T&quot;: HTTPS GET</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">accessControlAllowed</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Whether &quot;Access-Control-Allow-Origin: *&quot; added in HTTP header for communication protocol as HTTP(S) GET.<br>&quot;Y&quot; means Yes.<br>&quot;N&quot; means No.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">port</td>
+<td style="text-align:center">5</td>
+<td style="text-align:left">Ethernet port when communication type is Ethernet between terminal and ECR/PC.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">primary</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Primary communication channel.<br>&quot;L&quot; = LAN (Ethernet)<br>&quot;D&quot; = Dial-up<br>&quot;W&quot; = WIFI<br>&quot;G&quot; = Wireless</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">secondary</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Back-up communication channel.<br>&quot;L&quot; = LAN (Ethernet)<br>&quot;D&quot; = Dial-up<br>&quot;W&quot; = WIFI<br>&quot;G&quot; = Wireless<br>&quot;N&quot; = not used</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">maxTries</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Maximum connection attempts.<br>Value must be &quot;1&quot; ~ &quot;9&quot;.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">connTimeout</td>
+<td style="text-align:center">4</td>
+<td style="text-align:left">The interval the terminal must connect to the host in 100ms. Acceptable value will be between 1 and 9999. The default value is 300.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">recvTimeout</td>
+<td style="text-align:center">4</td>
+<td style="text-align:left">The interval the terminal waits to receive the host response message. Acceptable value will be between 1 and 9999. The default value is 500.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">IP</td>
+<td style="text-align:center">15</td>
+<td style="text-align:left">Local IP address</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">netmask</td>
+<td style="text-align:center">15</td>
+<td style="text-align:left">Local netmask</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">gateway</td>
+<td style="text-align:center">15</td>
+<td style="text-align:left">Local gateway</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">DNS</td>
+<td style="text-align:center">15</td>
+<td style="text-align:left">Local DNS</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">DHCP</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Is DHCP enabled?<br>&quot;Y&quot; = Enabled<br>&quot;N&quot; = Static IP mode.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">limitLen</td>
+<td style="text-align:center">4</td>
+<td style="text-align:left">Length limitation of ECR/PC’s receiving buffer. If data size exceeds limit, data broken up into multiple packets.<br>Maximum length = 3999 bytes. If size exceeds 3999 bytes, terminal returns an error.<br>Minimum length is 10 bytes. If size is less than 10 bytes, terminal returns an error.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">cashBack</td>
+<td style="text-align:center">128</td>
+<td style="text-align:left">Cash back amount for selection.<br>An amount list separated by &quot;,&quot; which screen can show for user selection. <br>Terminal adds &quot;Other Amount,&quot; as user enters amount, as last option besides &quot;cashBack&quot; setting.<br>If first amount is 0 = no cash back. <br>If one field in the list is set to 0, it is ignored.<br>There can only be a maximum of 4 values set for the list.<br>Example, if this value set to &quot;1000,2000,3000,4000&quot;, the screen shows 4 options as $10.00, $20.00, $30.00, $40.00.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">authURL0<br>authURL1</td>
+<td style="text-align:center">64</td>
+<td style="text-align:left">Host Authorization URLs. Cannot exceed 64 bytes.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">authPort0<br>authPort1</td>
+<td style="text-align:center">5</td>
+<td style="text-align:left">Host Authorization ports. Cannot exceed 65535.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">authPhone0<br>authPhone1<br>authPhone2</td>
+<td style="text-align:center">32</td>
+<td style="text-align:left">Host Authorization dial numbers, cannot exceed 32 bytes.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">batchURL0<br>batchURL1</td>
+<td style="text-align:center">64</td>
+<td style="text-align:left">Host Batch URLs, cannot exceed 64 bytes.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">batchPort0<br>batchPort1</td>
+<td style="text-align:center">5</td>
+<td style="text-align:left">Host Batch ports, cannot exceed 65535.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">batchPhone0<br>batchPhone1<br>batchPhone2</td>
+<td style="text-align:center">32</td>
+<td style="text-align:left">Host Batch dial numbers, cannot exceed 32 bytes.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">intervalTime</td>
+<td style="text-align:center">4</td>
+<td style="text-align:left">When using multiple idle screen images, the duration that each image shall display (in units of 100 milliseconds).<br>Accepts numeric values in range [10, 9999].</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">Header</td>
+<td style="text-align:center">164</td>
+<td style="text-align:left">Header line information to print on receipt. <br>Formatted as below:<br>HeaderLine1[US]HeaderLine2[US] HeaderLine3[US]HeaderLine4[US] HeaderLine5<br>Maximum length of each Header Line is 32.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">Trailer</td>
+<td style="text-align:center">164</td>
+<td style="text-align:left">Trailer line information to print on receipt. <br>Formatted as below:<br>TrailerLine1[US]TrailerLine2[US] TrailerLine3[US]TrailerLine4[US] TrailerLine5<br>Maximum length of each Trailer Line is 32.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">msgTitle</td>
+<td style="text-align:center">36</td>
+<td style="text-align:left">&quot;Show message&quot; command title.<br>Default value is &quot;Message&quot;.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">hostRspTimeout</td>
+<td style="text-align:center">3</td>
+<td style="text-align:left">Host Approval&quot; or &quot;Declined&quot; Response &quot;timeout in 100ms increments. A &quot;0&quot; setting disables screen.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">accountMenuTimeout</td>
+<td style="text-align:center">3</td>
+<td style="text-align:left">Card input timeout in 100ms increments. Valid value range is between [200, 3000].<br></td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">idleImageName</td>
+<td style="text-align:center">14</td>
+<td style="text-align:left">The name of the image file that the Idle screen shall display. Do not include the file extension.<br>Image files must be in the appropriate file format for the terminal model. See Terminal Image Formats for appropriate formats for each model.<br>If not set, the following named images (if they exist) shall display as a slideshow: &quot;mt30_ad0&quot;, &quot;mt30_ad1&quot;, &quot;mt30_ad2&quot;. If none exist, or if set to an invalid file, the app shall display the default idle image.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">signLine1</td>
+<td style="text-align:center">26</td>
+<td style="text-align:left">Signature prompt line 1, default = &quot;Transaction Approved&quot;.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">signLine2</td>
+<td style="text-align:center">26</td>
+<td style="text-align:left">Signature prompt line 2, default = &quot;Please Sign Your Name&quot;.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">swipeAnyTime</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Whether or not to enable &quot;Swipe Any Time&quot; mode.<br>&quot;Y&quot; = YES<br>&quot;N&quot; = NO (the default value)</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">cardSwipedTimeout</td>
+<td style="text-align:center">3</td>
+<td style="text-align:left">Swiped card Timeout when in &quot;Swipe Any Time&quot; mode.<br>Valid value range is between150 and 999.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">hostRspBeep</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Enable/disables beep after receiving host response.<br>&quot;Y&quot; = YES (default value)<br>&quot;N&quot; = NO</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">integrationMode</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Integration mode.<br>&quot;S&quot; = Semi-Integration,<br>&quot;F&quot; = Full Integration.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">ecrBaudRate</td>
+<td style="text-align:center">6</td>
+<td style="text-align:left">ECR communication Baud Rate (BPS), default = 9600.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">supportPrint</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Support print controls the printing of transaction receipts and batch reports.<br>&quot;Y&quot; enables the printing of transaction receipts and batch reports.<br>&quot;N&quot; disables the printing of transaction receipts and batch reports.<br>&quot;R&quot; only enables the printing of receipts.<br>&quot;B&quot; only enables the printing of batch reports.<br>supportPrint setting defaults to Enabled.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">hostInfor</td>
+<td style="text-align:center">128</td>
+<td style="text-align:left">[Deprecated] Can be retrieved from the INIT command response instead.<br>Host information. Currently it’s in format as below:<br>&quot;Host Name_Host Version&quot;. And EDC is required along with the &quot;GETVAR&quot; command.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">stationNo</td>
+<td style="text-align:center">2</td>
+<td style="text-align:left">Station number.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">dateTime</td>
+<td style="text-align:center">14</td>
+<td style="text-align:left">Terminal date time in YYYYMMDDHHMMSS format.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">thankYouLine1<br>thankYouLine2<br>thankYouLine3</td>
+<td style="text-align:center">36</td>
+<td style="text-align:left">Messages on default &quot;Show Thank You&quot; screen.<br>Max length depends on terminal screen size.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">scrBacklightMode</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Screen backlight mode.<br>0 = Always Off<br>1 = On with 60s timeout (by default)<br>2 = Always On</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">surchargeFeeName</td>
+<td style="text-align:center">24</td>
+<td style="text-align:left">Surcharge Fee name to display/print.<br><br><br></td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">surchargeFeeMode</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Set the surcharge fee mode.<br>&quot;N&quot; for disabled.<br>&quot;D&quot; for flat fee.<br>&quot;P&quot; for &quot;In Percentage&quot;.<br>&quot;H&quot; for Highest.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">surchargeFee</td>
+<td style="text-align:center">4</td>
+<td style="text-align:left">Surcharge Flat Fee.<br>The value is from 0 to 9999.<br>The format is $$CC.<br>ie. 9999 means $99.99</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">surchargeFeePercentage</td>
+<td style="text-align:center">3</td>
+<td style="text-align:left">Surcharge Fee Percentage.<br>The value is from 0 to 9999.<br>surchargeDecimalPrecision will determine the decimal placement.<br>The default of the surchargeDecimalPrecision is set to 2 giving you two digits after the decimal point (.00).<br>surchargeDecimalPrecision can also be set to 3 giving you three digits after the decimal point (.000).</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">surchargeConfirm</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Whether actual surcharge fee needs to be prompted in transaction.<br>&quot;Y&quot; - prompt.<br>&quot;N&quot; - not prompt.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">customerCopy</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Receipt printing option:<br>0 = no receipt<br>1 = merchant only<br>2 = customer only<br>3 = Both merchant /customer copy</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">appName</td>
+<td style="text-align:center">64</td>
+<td style="text-align:left">Application Name.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">appVersion</td>
+<td style="text-align:center">64</td>
+<td style="text-align:left">Application Version.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">VASMODE</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Apple Passbook NFC value added service mode:<br>0 = vas_only<br>1 = vas_and_payment<br>2 = vas_or_payment<br>3 = payment_only</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">VASURLMODE</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">VAS URL mode:<br>0 = Full vas protocol<br>1 = URL vas protocol only</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">VASURL</td>
+<td style="text-align:center">64</td>
+<td style="text-align:left">VAS URL:<br>URL or IP address all accept</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">VASMID</td>
+<td style="text-align:center">128</td>
+<td style="text-align:left">VAS MID:<br>Its format is MID#MID#MID#…(# is separator).<br>Please note that each MID max length is 36<br></td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">contactlessMode</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Contactless mode:<br>N = OFF<br>I = Internal<br>5 = ViVOtech 4500<br>8 = ViVOtest 4800</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">taxPrompt</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Tax prompt:<br>N: OFF<br>Y: ON</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">autoBatch</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Auto batch mode<br>N: OFF<br>Y: Auto Clear Database<br>B: Auth Batch Close</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">batchTime</td>
+<td style="text-align:center">4</td>
+<td style="text-align:left">Auto Clear Database time setting<br>Format is hhmm</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">startBatchTime</td>
+<td style="text-align:center">4</td>
+<td style="text-align:left">Auto Batch Close start time<br>Format is hhmm</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">endBatchTime</td>
+<td style="text-align:center">4</td>
+<td style="text-align:left">Auto Batch Close end time<br>Format is hhmm</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">batchInterval</td>
+<td style="text-align:center">2</td>
+<td style="text-align:left">Auto Batch close interval (minutes)</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">cashBackHALO</td>
+<td style="text-align:center">8</td>
+<td style="text-align:left">HALO for cashback/withdraw</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">promptCashbackOtherAMT</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Cashback Other Amount Prompt<br>Y: Enable<br>N: Disable</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">noTipSelection</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Disable or enable no tip selection button<br>&quot;N&quot; : Enabled<br>&quot;Y&quot; : Disabled</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">tipAmountOptions</td>
+<td style="text-align:center">20</td>
+<td style="text-align:left">The tip amount for selection. This is an amount list separated by &quot; &quot; which can be shown on the screen for user selection.<br>It supports max setting 3 tip amounts.<br>Each value is from 0 to 999999.<br>When a value is set to 0 this tip amount option will not be displayed.<br>The format is $$$$CC, two implied decimals.<br>An example, if this value set to &quot;1000 2000 3000&quot;, the screen will show 3 options as $10.00, $20.00, $30.00.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">tipPercentageOptions</td>
+<td style="text-align:center">8</td>
+<td style="text-align:left">The tip percentage for selection, this is a percentage list separated by &quot; &quot; which can be shown on the screen for user selection.<br>It supports max setting 3 tip percentages.<br>Each value is from 0 to 99.<br>When a value is set to 0 this tip percentage option will not be displayed.<br>The format should be two digits.<br>An example, if this value set to &quot;15 18 20&quot;, the screen will show 3 options as 15%, 18%, 20%.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">XWebID</td>
+<td style="text-align:center">12</td>
+<td style="text-align:left">This is the ID given to the merchant once they have been enrolled in OpenEdge.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">TerminalID</td>
+<td style="text-align:center">8</td>
+<td style="text-align:left">This is the ID given to the terminal once they have been enrolled in OpenEdge.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">operatingUserID</td>
+<td style="text-align:center">50</td>
+<td style="text-align:left">The user ID of the operator performing actions such as adding or modifying roles or users.<br>The field is used in TransIT.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">solutionId</td>
+<td style="text-align:center">8</td>
+<td style="text-align:left">Identifier for the partner that is integrated to CyberSource.<br>Send this value in all requests that are sent through the partner solution. CyberSource assigns the ID to the partner.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">signTimeout</td>
+<td style="text-align:center">4</td>
+<td style="text-align:left">Valid scope [150, 9999].<br>An empty value means no timeout.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">ecrRequestTimeout</td>
+<td style="text-align:center">2</td>
+<td style="text-align:left">The timeout value terminal will wait. After the specified time, if terminal still didn’t receive the request, it will break TCP connection. <br>Valid scope [30, 80]. Unit: 100ms</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">hiddenAmount</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Indicates whether to display the amount on screen. <br>Y: Hide<br>N: Show</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">insertAnyTime</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Whether to enable &quot;Insert Any Time&quot; mode.<br>Y: Enable<br>N: Disable (the default value).</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">posName</td>
+<td style="text-align:center">50</td>
+<td style="text-align:left">The POS application name.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">posVersion</td>
+<td style="text-align:center">10</td>
+<td style="text-align:left">The POS application version.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">posDeveloper</td>
+<td style="text-align:center">50</td>
+<td style="text-align:left">The identifier for the POS application developer.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">level3Support</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Indicates the processor whether or not to send the level 3 data to the issuer or keep as a record.<br>Y - Send level 3 data to the card issuer.<br>N - Do not send level 3 to issuer.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">posLicenseKey</td>
+<td style="text-align:center">128</td>
+<td style="text-align:left">The license key obtained from Eagle Management System to allow use of the application.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">tipEnable</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Disable or enable tip.<br>Y: Enable<br>N: Disable</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">fallbackToInsert</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Tell the terminal whether to fallback to Contact EMV when contactless fails.<br>Y: Enable<br>N: Disable</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">contactlessRetries</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">The number of retries the terminal will allow after a contactless card read error.<br>Valid range: 0-2</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">surchargeDecimalPrecision</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Indicates the decimal placement selected for the surchargeFeePercentage. If the surchargeDecimalPrecision is not set, this defaults to 2 decimal places in the percentage.<br>2:999 -&gt; 9.99%.<br>3: 9999 -&gt; 9.999%.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">returnedBinLength</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">The length of the returned BIN for account numbers that are 16 digits or greater in length. The value can be 6(default) or 8. Note: For FDRCNV TC (Sherwin Williams applications), this must default to 8.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">insertAnyTimeTimeout</td>
+<td style="text-align:center">3</td>
+<td style="text-align:left">Timeout for the card data cached for &quot;Insert Any Time&quot;. Valid between 150 and 999.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">connRetryInterval</td>
+<td style="text-align:center">2</td>
+<td style="text-align:left">The interval of time the terminal will attempt to establish a network connection. The minimum value is 1 hour.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">connRetryTimeout</td>
+<td style="text-align:center">4</td>
+<td style="text-align:left">The timeout to control how long the terminal should attempt to establish a connection to the network.<br>Measured in 100 ms with minimum value of 1 and maximum of 9999.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">maxRetry</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">The number between 1 and 9(inclusive) of times that the terminal will attempt to reconnect to the network. The default value is &quot;1&quot;.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">secondaryPort</td>
+<td style="text-align:center">5</td>
+<td style="text-align:left">The secondary port when the communication type is Ethernet between terminal and ECR/PC, default as 10010. This channel only sends cancel, reset, and reboot commands.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">printerBaudRate</td>
+<td style="text-align:center">7</td>
+<td style="text-align:left">Baud rate for Printer Module communication.<br>Options:<br>•    Default - the application’s printer baud rate will be the default value assigned to the specific printer module:<br>    For PT100 the baud rate will be 19200.<br>    For DW14 the baud rate will be 38400.<br>    For C56 the baud rate will be 115200.<br>    For Others the baud rate will be N/A.<br>•    115200<br>•57600<br>•38400<br>•19200<br>•9600<br>•4800</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">dedicatedDeviceMode</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Dedicated device mode.<br>Y: Enable<br>N: Disable<br>When enabled, BroadPOS will function solely as a payment device. The device will enter a full screen mode and the user must navigate to the Function menu to exit the application. This will prevent the user easily exit the application.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">tapAnyTime</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Whether to enable &quot;Tap Any Time&quot; mode.<br>&quot;Y&quot; for Yes,<br>&quot;N&quot; for No (the default value).</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">tapAnyTimeTimeout</td>
+<td style="text-align:center">3</td>
+<td style="text-align:left">Timeout for card tapped in &quot;Tap Any Time&quot; mode. In 100ms. Valid between 150 and 999.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">netConnRetryInterval</td>
+<td style="text-align:center">2</td>
+<td style="text-align:left">Interval of time in minutes the terminal will attempt to establish a network connection. Measured in 100 ms with a range of [300,9999] with a default in 300 ms.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">netConnRetryTimeout</td>
+<td style="text-align:center">4</td>
+<td style="text-align:left">The timeout to control how long the terminal should attempt to establish a connection to the network. Measured in 100 ms with a range of [100,9999] with a default of 300 ms.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">netMaxRetry</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">The number of times the terminal will attempt to reconnect to the network. The default is &quot;1&quot; with range of [1,9].</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">locationID</td>
+<td style="text-align:center">20</td>
+<td style="text-align:left">The merchant location number.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-integration-only">Full Integration Only</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:center">Length</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">R/W</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">contactRetryBeforeFallback</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">The number of contact chip retries before fallback swipe.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">e2eeIdentityString</td>
+<td style="text-align:center">128</td>
+<td style="text-align:left">The ID String used for Voltage E2EE Encryption.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">InitializationVector</td>
+<td style="text-align:center">32</td>
+<td style="text-align:left">The initialization vector for DUKPT encryption.<br>When the algorithm is DUKPT DES, the length is 16.<br>When the algorithm is DUKPT AES, the length is 32.<br>If the value is empty, the initialization vector will be filled with 0</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">e2eeEncryptionMode</td>
+<td style="text-align:center">4</td>
+<td style="text-align:left">The mode used to determine which voltage encryption format terminal should use. Valid values are TEP1X, TEP2X, TEP4.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">binWhitelist</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Enable or disable BIN whitelist for P2PE solution.<br>Y: Enable<br>N: Disable</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">quickChipMode</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Enable or disable quick chip mode.<br>Y: Enable<br>N: Disable</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">quickChipPlaceholderAmount</td>
+<td style="text-align:center">9</td>
+<td style="text-align:left">When quickChipMode is enabled, this will be the default amount to process the ICC if the transaction amount is set to zero.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">contactlessReadBeep</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Enable or disable the beep when contactless read.<br>Y: Enable<br>N: Disable</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">emvCardRemoveBeepForContactless</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Enable or disable EMV Card Remove Beep For Contactless.<br>Y: Enable<br>N: Disable</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">emvCardRemoveBeep</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">EMV Card Remove Beep.<br>0: No Beep<br>1: One Beep<br>2: Continuous Beep</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">swipeTapPriority</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">The response priority of Swipe or Tap for the terminals which contactless reader near the magnetic stripe reader. In these terminals, such as A920, A920pro, A77, A30, we might get both swipe and tap signal when user swipe.<br>S: Swipe First<br>T: Tap First</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">KeyPeriod</td>
+<td style="text-align:center">3</td>
+<td style="text-align:left">The injected E2EE key will expire after a certain period of time. This parameter specifies the time span(days).<br>Scope: [1, 365]</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">autoShowSecuredKeyboard</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Auto show secured keyboard when manual input Account and CVV.<br>N: Never<br>Y: Always<br>A: Only manual entry</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">lineEncryptionMode</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">The encryption mode for the communication between A80 and SP30. When use BroadPOS P2PE, this parameter must be Y(enable).<br>N: Disabled<br>A: Auto<br>Y: Enabled</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">EMVContactVersion</td>
+<td style="text-align:center">20</td>
+<td style="text-align:left">Get Kernel version of Contact EMV.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">PaywaveVersion</td>
+<td style="text-align:center">20</td>
+<td style="text-align:left">Get Kernel version of Paywave.<br>Note: Paywave is now renamed as VCPS.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">PaypassVersion</td>
+<td style="text-align:center">20</td>
+<td style="text-align:left">Get Kernel version of Paypass.<br>Note: Paypass is now renamed as MCL.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">DPASVersion</td>
+<td style="text-align:center">20</td>
+<td style="text-align:left">Get Kernel version of D-PAS.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">ExpresspayVersion</td>
+<td style="text-align:center">20</td>
+<td style="text-align:left">Get Kernel version of Expresspay.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">JSpeedyVersion</td>
+<td style="text-align:center">20</td>
+<td style="text-align:left">Get Kernel version of JSpeedy.<br>Note: JSpeedy is now renamed as JCB CL.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">QPBOCVersion</td>
+<td style="text-align:center">20</td>
+<td style="text-align:left">Get Kernel version of QPBOC.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">FlashVersion</td>
+<td style="text-align:center">20</td>
+<td style="text-align:left">Get Kernel version of Flash.</td>
+<td style="text-align:left">R</td>
+</tr>
+<tr>
+<td style="text-align:left">clAuthCvmRequired</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Require a CVM for contactless pre-auth transaction.<br>Y: Enabled<br>N: Disabled</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">clAuthCdcvmOnly</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">When the transaction type is Auth, set CVM parameter only support CDCVM for all kernels if this switch set to &quot;Y&quot;.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+<tr>
+<td style="text-align:left">clssTxLmtNoDevAuth</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">When the transaction type is Auth, set the ContactlessTransactionLimit_NoOnDevice in Paypass kernel. When the value is less than 0, it means the ContactlessTransactionLimit_NoOnDevice from clssparam.xml.</td>
+<td style="text-align:left">R/W</td>
+</tr>
+</tbody>
+</table>
+<h1 id="emv-kernel-configuration-type">EMV Kernel Configuration Type</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">EMV Kernel Value</th>
+<th style="text-align:center">Terminal Type</th>
+<th style="text-align:center">Online PIN</th>
+<th style="text-align:center">Offline Enciphered PIN</th>
+<th style="text-align:center">Offline Plaintext PIN</th>
+<th style="text-align:center">Signature</th>
+<th style="text-align:center">No CVM</th>
+<th style="text-align:left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">01</td>
+<td style="text-align:center">Attended</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:left">All CVM Supported.</td>
+</tr>
+<tr>
+<td style="text-align:left">02</td>
+<td style="text-align:center">Attended</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">×</td>
+<td style="text-align:left">&quot;No CVM&quot; and &quot;Online PIN&quot; are disabled.</td>
+</tr>
+<tr>
+<td style="text-align:left">03</td>
+<td style="text-align:center">Attended</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:left">&quot;Online PIN&quot; is disabled.</td>
+</tr>
+<tr>
+<td style="text-align:left">04</td>
+<td style="text-align:center">Attended</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">×</td>
+<td style="text-align:left">&quot;No CVM&quot; is disabled.</td>
+</tr>
+<tr>
+<td style="text-align:left">05</td>
+<td style="text-align:center">Attended</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">×</td>
+<td style="text-align:left">Only &quot;Signature&quot; is ENABLED.</td>
+</tr>
+<tr>
+<td style="text-align:left">06</td>
+<td style="text-align:center">Attended</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+<td style="text-align:left">Only &quot;No CVM&quot; is ENABLED.</td>
+</tr>
+<tr>
+<td style="text-align:left">07</td>
+<td style="text-align:center">Attended</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+<td style="text-align:left">&quot;Signature&quot; is disabled.</td>
+</tr>
+<tr>
+<td style="text-align:left">08</td>
+<td style="text-align:center">Attended</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:left">Only &quot;No CVM&quot; and &quot;Signature&quot; are ENABLED.</td>
+</tr>
+<tr>
+<td style="text-align:left">09</td>
+<td style="text-align:center">Unattended</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+<td style="text-align:left">&quot;Signature&quot; is disabled.</td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:center">Unattended</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:left">&quot;Signature&quot; and &quot;No CVM&quot; are disabled.</td>
+</tr>
+<tr>
+<td style="text-align:left">11</td>
+<td style="text-align:center">Unattended</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:left">Only &quot;Online PIN&quot; is ENABLED.</td>
+</tr>
+<tr>
+<td style="text-align:left">12</td>
+<td style="text-align:center">Unattended</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+<td style="text-align:left">&quot;Signature&quot; and &quot;Online PIN&quot; are disabled.</td>
+</tr>
+<tr>
+<td style="text-align:left">13</td>
+<td style="text-align:center">Unattended</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+<td style="text-align:left">Only &quot;No CVM&quot;.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="emv-tags">EMV Tags</h1>
+<h2 id="emv-tags-for-response-of-input-account">EMV Tags for Response of Input Account</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Tag Identifier</th>
+<th style="text-align:center">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">4F</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Application Identifier</td>
+</tr>
+<tr>
+<td style="text-align:left">50</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Application Label</td>
+</tr>
+<tr>
+<td style="text-align:left">56</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">If tag 56 exists and is not encrypted, returns Track 1 data</td>
+</tr>
+<tr>
+<td style="text-align:left">57</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">If tag 57 is not encrypted, returns Track 2 equivalent data</td>
+</tr>
+<tr>
+<td style="text-align:left">5A</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">If tag 5A is not encrypted, returns Application Primary Account Number</td>
+</tr>
+<tr>
+<td style="text-align:left">5F20</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">Cardholder Name</td>
+</tr>
+<tr>
+<td style="text-align:left">5F24</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">Application Expiry Date</td>
+</tr>
+<tr>
+<td style="text-align:left">5F25</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">Application Effective Date</td>
+</tr>
+<tr>
+<td style="text-align:left">5F2D</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">Language Preference</td>
+</tr>
+<tr>
+<td style="text-align:left">5F30</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">Service Code</td>
+</tr>
+<tr>
+<td style="text-align:left">5F34</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">Application Primary Account Number Sequence Number</td>
+</tr>
+<tr>
+<td style="text-align:left">9F11</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">Issuer Code Table Index</td>
+</tr>
+<tr>
+<td style="text-align:left">9F12</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">Application preferred Name</td>
+</tr>
+<tr>
+<td style="text-align:left">9F39</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">POS Entry Mode: indicates the method by which the user entered the PAN, according to the first two digits of the ISO 8583 POS Entry Mode.<br>As referring to ISO 8583 specification, the first 2 bytes of entry mode for ICC card is always &quot;05&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left">DF78</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">It’s only for TSYS Sierra.<br>Device Serial Number<br>The manufacturer&#39;s unique serial number of the device that interacts with the chip card. (variable 1 - 20)<br>It is for Contact and Contactless.<br>The format is ASCII.</td>
+</tr>
+<tr>
+<td style="text-align:left">DF79</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">It’s only for TSYS Sierra.<br>The version number of the kernel used to process the chip data in the transaction. (variable 1 - 32)<br>It is for Contact kernel only. The format is HEX.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="emv-tags-for-response-of-authorize-card">EMV Tags for Response of Authorize Card</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Tag Identifier</th>
+<th style="text-align:center">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">82</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Application Interchange Profile (AIP)</td>
+</tr>
+<tr>
+<td style="text-align:left">84</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Dedicated File (DF) Name</td>
+</tr>
+<tr>
+<td style="text-align:left">95</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Terminal Verification Result (TVR)</td>
+</tr>
+<tr>
+<td style="text-align:left">9B</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Transaction Status Information (TSI)</td>
+</tr>
+<tr>
+<td style="text-align:left">5F20</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">Cardholder Name</td>
+</tr>
+<tr>
+<td style="text-align:left">9C</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Transaction Type</td>
+</tr>
+<tr>
+<td style="text-align:left">9F07</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">Application Usage Control (AUC)</td>
+</tr>
+<tr>
+<td style="text-align:left">9F08</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">Application Version Number (ICC)</td>
+</tr>
+<tr>
+<td style="text-align:left">9F09</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Application Version Number (Terminal)</td>
+</tr>
+<tr>
+<td style="text-align:left">9F0D</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Issuer Action Code (IAC) – default</td>
+</tr>
+<tr>
+<td style="text-align:left">9F0E</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Issuer Action Code (IAC) - Denial</td>
+</tr>
+<tr>
+<td style="text-align:left">9F0F</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Issuer Action Code (IAC) - Online</td>
+</tr>
+<tr>
+<td style="text-align:left">9F10</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Issuer Application Data (IAD)</td>
+</tr>
+<tr>
+<td style="text-align:left">9F1A</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Terminal Country Code</td>
+</tr>
+<tr>
+<td style="text-align:left">9F26</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Application Cryptogram (AC)</td>
+</tr>
+<tr>
+<td style="text-align:left">9F27</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Cryptogram Information Data (IAD)</td>
+</tr>
+<tr>
+<td style="text-align:left">9F33</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Terminal Capabilities</td>
+</tr>
+<tr>
+<td style="text-align:left">9F34</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Cardholder Verification (CVM) Results</td>
+</tr>
+<tr>
+<td style="text-align:left">9F35</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Terminal Type</td>
+</tr>
+<tr>
+<td style="text-align:left">9F36</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Application Transaction Counter (ATC)</td>
+</tr>
+<tr>
+<td style="text-align:left">9F37</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Unpredictable Number</td>
+</tr>
+<tr>
+<td style="text-align:left">9F40</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Additional Terminal Capabilities</td>
+</tr>
+</tbody>
+</table>
+<h2 id="emv-tags-for-response-of-complete-online-emv">EMV Tags for Response of Complete Online EMV</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Tag Identifier</th>
+<th style="text-align:center">Required</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">95</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Terminal Verification Result (TVR)</td>
+</tr>
+<tr>
+<td style="text-align:left">9B</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Transaction Status Information (TSI)</td>
+</tr>
+<tr>
+<td style="text-align:left">9F26</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Application Cryptogram (AC)</td>
+</tr>
+<tr>
+<td style="text-align:left">9F27</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Cryptogram Information Data (IAD)</td>
+</tr>
+<tr>
+<td style="text-align:left">9F34</td>
+<td style="text-align:center">M</td>
+<td style="text-align:left">Cardholder Verification Method (CVM) Result</td>
+</tr>
+</tbody>
+</table>
+<h1 id="encrypted-sensitive-tlv-data-format-definition">Encrypted Sensitive TLV Data Format Definition</h1>
+<p>The follow is the illustration for format.<br>cn - Compressed numeric data elements consist of two numeric digits (having values in the range Hex &#39;0&#39;–&#39;9&#39;) per byte. These data elements are left justified and padded with trailing hexadecimal &#39;F&#39;s. Example: The Application Primary Account Number (PAN) is defined as &quot;cn&quot; with a length of up to ten bytes. A value of 1234567890123 may be stored in the Application PAN as Hex &#39;12 34 56 78 90 12 3F FF&#39; with a length of 8.<br>b - These data elements consist of either unsigned binary numbers or bit combinations that are defined elsewhere in the specification. Binary example: The Application Transaction Counter (ATC) is defined as “b” with a length of two bytes. An ATC value of 19 is stored as Hex &#39;00 13&#39;.  </p>
+<h2 id="manual">Manual</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Tag</th>
+<th style="text-align:left">Data Object</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:center">Format</th>
+<th style="text-align:left">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">DFA001</td>
+<td style="text-align:left">Private</td>
+<td style="text-align:left">PAN - key entered</td>
+<td style="text-align:center">cn</td>
+<td style="text-align:left">PAN Entered: 123456789<br>TLV: \xDF\xA0\x01\x05\x12\x34\x56\x78\x9F</td>
+</tr>
+<tr>
+<td style="text-align:left">DFA002</td>
+<td style="text-align:left">Private</td>
+<td style="text-align:left">CVV/CID</td>
+<td style="text-align:center">cn</td>
+<td style="text-align:left">CVV Entered: 123<br>TLV: \xDF\xA0\x02\x02\x12\x3F</td>
+</tr>
+<tr>
+<td style="text-align:left">DFA003</td>
+<td style="text-align:left">Private</td>
+<td style="text-align:left">Expiry date (YYMM)</td>
+<td style="text-align:center">cn</td>
+<td style="text-align:left">EXPDATE Entered: 1219<br>TLV: \xDF\xA0\x03\x02\x12\x19</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Decrypted Encrypted Sensitive Data: 
+\xDF\xA0\x01\x05\x12\x34\x56\x78\x9F\xDF\xA0\x02\x02\x12\x3F\xDF\xA0\x03\x02\x12\x19</p>
+<h2 id="msr">MSR</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Tag</th>
+<th style="text-align:left">Data Object</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:center">Format</th>
+<th style="text-align:left">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">DFA004</td>
+<td style="text-align:left">Private</td>
+<td style="text-align:left">Raw magstripe Track2 including start and end sentinel</td>
+<td style="text-align:center">ascii</td>
+<td style="text-align:left">Raw Track2: ;4055010000000005=15125025432198712345?<br>TTLV: \xDF\xA0\x04\x39;4055010000000005=15125025432198712345?</td>
+</tr>
+<tr>
+<td style="text-align:left">DFA005 (optional)</td>
+<td style="text-align:left">Private</td>
+<td style="text-align:left">Raw magstripe Track1 including start and end sentinel</td>
+<td style="text-align:center">ascii</td>
+<td style="text-align:left"><br></td>
+</tr>
+</tbody>
+</table>
+<p>Sample Decrypted Encrypted Sensitive Data:<br>\xDF\xA0\x04\x39;4055010000000005=15125025432198712345?</p>
+<h2 id="icc-nfc">ICC/NFC</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Tag</th>
+<th style="text-align:left">Data Object</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:center">Format</th>
+<th style="text-align:left">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">57</td>
+<td style="text-align:left">Track 2 Equivalent Data</td>
+<td style="text-align:left">Contains the data elements of track 2 according to ISO/IEC 7813, excluding start sentinel, end sentinel, and Longitudinal Redundancy Check (LRC)</td>
+<td style="text-align:center">b</td>
+<td style="text-align:left">TLV: \x57\x19\x47\x61\x73\x90\x01\x01\x00\x 10\xD1\x81\x22\x01\x11\x43\x87\x80\x01\x 62\x9F</td>
+</tr>
+<tr>
+<td style="text-align:left">5A</td>
+<td style="text-align:left">Application Primary Account Number (PAN)</td>
+<td style="text-align:left">Valid cardholder account number.</td>
+<td style="text-align:center">cn</td>
+<td style="text-align:left">TLV: \x5A\x08\x47\x61\x73\x90\x01\x 01\x00\x10</td>
+</tr>
+<tr>
+<td style="text-align:left">9F6B (optional)</td>
+<td style="text-align:left">Track 2 Data</td>
+<td style="text-align:left">Contains the data objects of the Track 2 according to (ISO/IEC 7813), excluding start sentinel, end sentinel and LRC.<br>Optional.<br>MasterCard Only.</td>
+<td style="text-align:center">Optional<br>b</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">56 (optional)</td>
+<td style="text-align:left">Track1 Data</td>
+<td style="text-align:left">Track 1 Data contains the data objects of the track 1 according to [ISO/IEC 7813] Structure B, excluding start sentinel, end sentinel and LRC. The Track 1 Data may be present in the file read using the READ RECORD command during a mag-stripe mode transaction.</td>
+<td style="text-align:center">Optional<br>ans</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">9F1F (optional)</td>
+<td style="text-align:left">Track 1 Discretionary Data</td>
+<td style="text-align:left">Discretionary part of track 1 according to ISO/IEC 7813</td>
+<td style="text-align:center">Optional<br>ans</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">9F20 (optional)</td>
+<td style="text-align:left">Track 2 Discretionary Data</td>
+<td style="text-align:left">Discretionary part of track 2 according to ISO/IEC 7813</td>
+<td style="text-align:center">Optional<br>cn</td>
+<td style="text-align:left"><br></td>
+</tr>
+</tbody>
+</table>
+<p>Sample Decrypted Encrypted Sensitive Data:<br>\x57\x19\x47\x61\x73\x90\x01\x01\x00\x10\xD1\x81\x22\x01\x11\x43\x87\x80\x01\x62\x9F\x5A\x08\x47\x61\x73\x90\x01\x 01\x00\x10</p>
+<h1 id="control-character-for-text-showing">Control Character for Text Showing</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Character</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Apply to Commands</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:left">Line feed</td>
+<td style="text-align:left">ShowTextBox/ShowDialog/ShowDialogForm</td>
+</tr>
+<tr>
+<td style="text-align:left">\C</td>
+<td style="text-align:left">Center alignment</td>
+<td style="text-align:left">ShowMessage/ShowMessageCenter/ShowTextBox/ShowDialog/ShowDialogForm/ShowItem</td>
+</tr>
+<tr>
+<td style="text-align:left">\L</td>
+<td style="text-align:left">Left alignment</td>
+<td style="text-align:left">ShowMessage/ShowMessageCenter/ShowTextBox/ShowDialog/ShowDialogForm/ShowItem</td>
+</tr>
+<tr>
+<td style="text-align:left">\R</td>
+<td style="text-align:left">Right alignment</td>
+<td style="text-align:left">ShowMessage/ShowMessageCenter/ShowTextBox/ShowDialog/ShowDialogForm/ShowItem</td>
+</tr>
+<tr>
+<td style="text-align:left">\B</td>
+<td style="text-align:left">Bold word</td>
+<td style="text-align:left">ShowMessage/ShowMessageCenter/ShowTextBox/ShowDialog/ShowDialogForm/ShowItem</td>
+</tr>
+<tr>
+<td style="text-align:left">\1</td>
+<td style="text-align:left">Small</td>
+<td style="text-align:left">ShowMessage/ShowMessageCenter/ShowTextBox/ShowDialog/ShowDialogForm/ShowItem</td>
+</tr>
+<tr>
+<td style="text-align:left">\2</td>
+<td style="text-align:left">Medium, Default size</td>
+<td style="text-align:left">ShowMessage/ShowMessageCenter/ShowTextBox/ShowDialog/ShowDialogForm/ShowItem</td>
+</tr>
+<tr>
+<td style="text-align:left">\3</td>
+<td style="text-align:left">Large</td>
+<td style="text-align:left">ShowMessage/ShowMessageCenter/ShowTextBox/ShowDialog/ShowDialogForm/ShowItem</td>
+</tr>
+</tbody>
+</table>
+<p>Notes:</p>
+<ol>
+<li>&quot;\C&quot; &quot;\L&quot; &quot;\R&quot; will not change line automatically, please add &quot;\n&quot; if you want to change to next line.</li>
+<li>&quot;\B&quot; can be used along with &quot;\L&quot; or &quot;\R&quot; or &quot;\C&quot; with format like &quot;\B\R&quot;.</li>
+<li>&quot;\B&quot; will automatically jump to next line if there are some words before &quot;\B&quot;.</li>
+<li>&quot;\B&quot; will only bold the first line.</li>
+<li>&quot;\1&quot;, &quot;\2&quot;, and &quot;\3&quot; will only apply the font size from where the control character was started and to the end of that specific lines text.<h1 id="printdata-data-format-for-printer">PrintData – Data format for printer</h1>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Control Character</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">\L</td>
+<td style="text-align:left">Use to indicate left string (default).</td>
+<td style="text-align:left">Print text left alignment (default value)<br>\L will stop at next control character or \n or new line.<br>Example:<br>\LText or Text</td>
+</tr>
+<tr>
+<td style="text-align:left">\R</td>
+<td style="text-align:left">Use to indicate this is the right string.</td>
+<td style="text-align:left">Print text right alignment will stop at next control character or \n or new line.<br>Example:<br>\RRightAlignText</td>
+</tr>
+<tr>
+<td style="text-align:left">\C</td>
+<td style="text-align:left">Use to indicate this is the central string</td>
+<td style="text-align:left">Print text center alignment<br>\C will stop at next control character or \n or new line.<br>Example:<br>\CCenterAlignText</td>
+</tr>
+<tr>
+<td style="text-align:left">\I</td>
+<td style="text-align:left">Inverted string</td>
+<td style="text-align:left">Print inverted string, the position of \I do NOT matter, it will stop at the next control character or \n or new line.<br>Example:<br>\Iwww or \L\Iwww or \I\Lwww</td>
+</tr>
+<tr>
+<td style="text-align:left">\$Logo</td>
+<td style="text-align:left">Use to print header image logo</td>
+<td style="text-align:left">It starts and terminates at new line, center align.<br>Limit:384<em>255 or less, unless will return PRINT LOGO ERROR.<br>Bit depth:1<br>\$LogoIMAGENAME or \$LogoIMAGENAME\n<br>First, zip picture (type: bmp), the file type in the zip package should be r, use command UPDATEIMAGE to upload image, then use command PRINT to print.<br>Example:<br>test.bmp properties:<br>dimensions:384</em>255<br>width:384 pixels<br>height:255 pixels<br>bit depth: 1<br>size: 12.0kb<br>attributes: A<br>command: \$Logotest or \$Logotest\n<br>print image: <br><img src="./image/printDataLogo.png" alt="printDataLogo image" title="printDataLogo"></td>
+</tr>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:left">Feed paper</td>
+<td style="text-align:left">Carriage return, the same as enter</td>
+</tr>
+<tr>
+<td style="text-align:left">\$eSig</td>
+<td style="text-align:left">Use to print signature</td>
+<td style="text-align:left">It starts and terminates at new line, center align. <br>Command: \$eSig\n or \$eSig<br><img src="./image/printDataSign.png" alt="printDataSign image" title="printDataSign"></td>
+</tr>
+<tr>
+<td style="text-align:left">\$BARD, code enum, size, data length, data</td>
+<td style="text-align:left">Use to print bar code.</td>
+<td style="text-align:left">It starts and terminates at new line, center align.<br>Fields are separated by comma (,).<br>Printing starts and terminates at new line (\n or next command) and bar code is center align.<br>Example:<br>1, Get the data by data length:<br>\$BARD,1,1,8,12345678<br><img src="./image/printDataBar1.png" alt="printDataBar1 image" title="printDataBar1"><br><br>2, for EAN128, the first for data should be<br>[xxxx]. Like: <br>\$BARD,4,1,12,[3101]000035<br><img src="./image/printDataBar4.png" alt="printDataBar4 image" title="printDataBar4"><br><br>3，for EN13, data length must be 12, like:<br>\$BARD,3,1,12,123456789012<br><img src="./image/printDataBar3.png" alt="printDataBar3 image" title="printDataBar3"><br><br>Barcode example:<br>Enum1, CODE39:<br>\$BARD,1,1,6,123456<br><img src="./image/printDataBar1_2.png" alt="printDataBar1_2 image" title="printDataBar1_2"><br><br>Enum 2, CODE 128:<br>\$BARD,2,1,8,12345678<br><img src="./image/printDataBar2.png" alt="printDataBar2 image" title="printDataBar2"><br><br>Enum 3, EAN13 :<br>\$BARD,3,1,12,123456789012<br><img src="./image/printDataBar3_2.png" alt="printDataBar3_2 image" title="printDataBar3_2"><br><br>Enum 4, EAN128:<br>\$BARD,4,1,12,[3102]000035<br><img src="./image/printDataBar4_2.png" alt="printDataBar4_2 image" title="printDataBar4_2"><br><br>Enum 5, PDF417:<br>\$BARD,5,2,8,12345678<br><img src="./image/printDataBar5.png" alt="printDataBar5 image" title="printDataBar5"><br><br>Enum 6, GRIDMATRIX:<br>\$BARD,6,8,8,12345678<br><img src="./image/printDataBar6.png" alt="printDataBar6 image" title="printDataBar6"><br><br>Enum 7, QRCODE:<br>\$BARD,7,8,8,12345678<br><img src="./image/printDataBar7.png" alt="printDataBar7 image" title="printDataBar7"><br><br>Size:<br>A minimum block that can be recognized, it is made up by square which has number of size level printing points in every row and column. Value can only be: 1,2, 4, 8, 12, or 16, and other values are invalid.</td>
+</tr>
+<tr>
+<td style="text-align:left">\1</td>
+<td style="text-align:left">Small font</td>
+<td style="text-align:left">Print text small size.<br>It will stop at the next control character or \n. <br>Example:<br>\1Small or Small\1Samll</td>
+</tr>
+<tr>
+<td style="text-align:left">\2</td>
+<td style="text-align:left">Normal font(default)</td>
+<td style="text-align:left">Print text normal size(default).<br>It will stop at the next control character or \n. <br>Example:<br>\2Normal or Normal\2</td>
+</tr>
+<tr>
+<td style="text-align:left">\3</td>
+<td style="text-align:left">Big font</td>
+<td style="text-align:left">Print text big size.<br>It will stop at the next control character or \n. <br>Example:<br>\3Big or Big\3Big</td>
+</tr>
+<tr>
+<td style="text-align:left">\$Header</td>
+<td style="text-align:left">Header Info</td>
+<td style="text-align:left">Print the BroadPOS Header Info. <br>It starts and terminates at new line, center align.</td>
+</tr>
+<tr>
+<td style="text-align:left">\$Trailer</td>
+<td style="text-align:left">Trailer Info</td>
+<td style="text-align:left">Print the BroadPOS Trailer Info. <br>It starts and terminates at new line, center align.</td>
+</tr>
+<tr>
+<td style="text-align:left">\$Disclaimer</td>
+<td style="text-align:left">Standard disclaimer</td>
+<td style="text-align:left">Print the standard disclaimer. <br>It starts and terminates at new line, center align.</td>
+</tr>
+<tr>
+<td style="text-align:left">\$Date</td>
+<td style="text-align:left">Current date</td>
+<td style="text-align:left">Print Date in MM/DD/YYYY format</td>
+</tr>
+<tr>
+<td style="text-align:left">\$Time</td>
+<td style="text-align:left">Current time</td>
+<td style="text-align:left">Print Time in HH:MM:SS format</td>
+</tr>
+<tr>
+<td style="text-align:left">\$SN#</td>
+<td style="text-align:left">Terminal S/N</td>
+<td style="text-align:left">Print terminal’s S/N</td>
+</tr>
+</tbody>
+</table>
+<h2 id="limited-length-for-barcode-data">Limited Length for Barcode Data</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Enum</th>
+<th style="text-align:left">Size</th>
+<th style="text-align:left">SubType</th>
+<th style="text-align:left">Data Length</th>
+<th style="text-align:left">Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CODE39</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">--</td>
+<td style="text-align:left">1-12</td>
+<td style="text-align:left">Numeric</td>
+</tr>
+<tr>
+<td style="text-align:left">CODE128</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">--</td>
+<td style="text-align:left">1-26</td>
+<td style="text-align:left">Numeric</td>
+</tr>
+<tr>
+<td style="text-align:left">CODE128</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">--</td>
+<td style="text-align:left">1-8，10</td>
+<td style="text-align:left">Numeric</td>
+</tr>
+<tr>
+<td style="text-align:left">EAN13</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">--</td>
+<td style="text-align:left">12</td>
+<td style="text-align:left">Numeric</td>
+</tr>
+<tr>
+<td style="text-align:left">EAN128</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">01\02</td>
+<td style="text-align:left">18</td>
+<td style="text-align:left">Numeric</td>
+</tr>
+<tr>
+<td style="text-align:left">EAN128</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">5-28</td>
+<td style="text-align:left">Numeric</td>
+</tr>
+<tr>
+<td style="text-align:left">EAN128</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">21</td>
+<td style="text-align:left">5-26</td>
+<td style="text-align:left">Numeric</td>
+</tr>
+<tr>
+<td style="text-align:left">EAN128</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">11\13\15\17</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">Numeric</td>
+</tr>
+<tr>
+<td style="text-align:left">EAN128</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">30\37</td>
+<td style="text-align:left">5-26</td>
+<td style="text-align:left">Numeric</td>
+</tr>
+<tr>
+<td style="text-align:left">EAN128</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">310n</td>
+<td style="text-align:left">12</td>
+<td style="text-align:left">Numeric</td>
+</tr>
+<tr>
+<td style="text-align:left">EAN128</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">400\401</td>
+<td style="text-align:left">6-26</td>
+<td style="text-align:left">Numeric</td>
+</tr>
+<tr>
+<td style="text-align:left">EAN128</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">410</td>
+<td style="text-align:left">18</td>
+<td style="text-align:left">Numeric</td>
+</tr>
+<tr>
+<td style="text-align:left">PDF417</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">--</td>
+<td style="text-align:left">1-74</td>
+<td style="text-align:left">Alphanumeric</td>
+</tr>
+<tr>
+<td style="text-align:left">GRIDMATRIX</td>
+<td style="text-align:left">6</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">--</td>
+<td style="text-align:left">1-54</td>
+<td style="text-align:left">Alphanumeric</td>
+</tr>
+<tr>
+<td style="text-align:left">GRIDMATRIX</td>
+<td style="text-align:left">6</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">--</td>
+<td style="text-align:left">1-26</td>
+<td style="text-align:left">Alphanumeric</td>
+</tr>
+<tr>
+<td style="text-align:left">GRIDMATRIX</td>
+<td style="text-align:left">6</td>
+<td style="text-align:left">12</td>
+<td style="text-align:left">--</td>
+<td style="text-align:left">1-8</td>
+<td style="text-align:left">Alphanumeric</td>
+</tr>
+<tr>
+<td style="text-align:left">QRCODE</td>
+<td style="text-align:left">7</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">--</td>
+<td style="text-align:left">1-126</td>
+<td style="text-align:left">Alphanumeric</td>
+</tr>
+</tbody>
+</table>
+<h1 id="special-amount-in-demo-mode">Special Amount in Demo Mode</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Index</th>
+<th style="text-align:left">Transaction Amount</th>
+<th style="text-align:left">Transaction Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">$20.01</td>
+<td style="text-align:left">Auth Decline</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">$20.02</td>
+<td style="text-align:left">Invalid Card</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">$30.01</td>
+<td style="text-align:left">Partial Approval $10.00</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">$30.02</td>
+<td style="text-align:left">Partial Approval $5.00</td>
+</tr>
+</tbody>
+</table>
+<h1 id="terminal-image-formats">Terminal Image Formats</h1>
+<h2 id="terminal-background-image">Terminal Background Image</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Model</th>
+<th style="text-align:left">Image Resolution<br>Width*Height in Pixels</th>
+<th style="text-align:left">Image Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">D180</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">D190</td>
+<td style="text-align:left">320*216</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">D200</td>
+<td style="text-align:left">320*200</td>
+<td style="text-align:left">PNG, BMP(24bit)</td>
+</tr>
+<tr>
+<td style="text-align:left">D210</td>
+<td style="text-align:left">320*200</td>
+<td style="text-align:left">PNG, BMP(24bit)</td>
+</tr>
+<tr>
+<td style="text-align:left">D220</td>
+<td style="text-align:left">480*760</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">IM10</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">IM15</td>
+<td style="text-align:left">480*320</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">IM20</td>
+<td style="text-align:left">480*272</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">IM30</td>
+<td style="text-align:left">720*1280</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">IM300</td>
+<td style="text-align:left">320*216</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">IM310</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">L1400</td>
+<td style="text-align:left">1920*1080</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">M8</td>
+<td style="text-align:left">800*1280</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">PX5</td>
+<td style="text-align:left">800*440</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">PX7</td>
+<td style="text-align:left">800*440</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">Q10A</td>
+<td style="text-align:left">480*320 / 320*480</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">Q20</td>
+<td style="text-align:left">480*272</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">Q25</td>
+<td style="text-align:left">320*216</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">Q30</td>
+<td style="text-align:left">800*440</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">Q80</td>
+<td style="text-align:left">480*726</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">S80</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">S300</td>
+<td style="text-align:left">240*248</td>
+<td style="text-align:left">PNG, BMP(24bit)</td>
+</tr>
+<tr>
+<td style="text-align:left">S500</td>
+<td style="text-align:left">320*200</td>
+<td style="text-align:left">PNG, BMP(24bit)</td>
+</tr>
+<tr>
+<td style="text-align:left">S920</td>
+<td style="text-align:left">240*280</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">SP30</td>
+<td style="text-align:left">320*200</td>
+<td style="text-align:left">PNG, BMP(24bit)</td>
+</tr>
+<tr>
+<td style="text-align:left">A30</td>
+<td style="text-align:left">1280*720</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A35</td>
+<td style="text-align:left">480*800</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A60</td>
+<td style="text-align:left">720*1280</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A77</td>
+<td style="text-align:left">720*1440</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A80</td>
+<td style="text-align:left">480*800</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A800</td>
+<td style="text-align:left">720*1440</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A920</td>
+<td style="text-align:left">720*1280</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A920 Pro</td>
+<td style="text-align:left">720*1440</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A920 MAX</td>
+<td style="text-align:left">720*1440</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A930</td>
+<td style="text-align:left">720*1280</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">Aries6</td>
+<td style="text-align:left">1280*720</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">Aries8</td>
+<td style="text-align:left">800*1280</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A3700</td>
+<td style="text-align:left">1280*800</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A6650</td>
+<td style="text-align:left">1080*2408</td>
+<td style="text-align:left">PNG</td>
+</tr>
+</tbody>
+</table>
+<h2 id="icon-image">Icon Image</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Model</th>
+<th style="text-align:left">Image Resolution<br>Width*Height in Pixels</th>
+<th style="text-align:left">Image Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">D180</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">D190</td>
+<td style="text-align:left">83*83</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">D200</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">D210</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">D220</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">IM10</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">IM15</td>
+<td style="text-align:left">96*96</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">IM20</td>
+<td style="text-align:left">96*96</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">IM30</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">IM300</td>
+<td style="text-align:left">83*83</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">IM310</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">L1400</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">M8</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">PX5</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">PX7</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">Q10A</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">Q20</td>
+<td style="text-align:left">96*96</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">Q25</td>
+<td style="text-align:left">83*83</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">Q30</td>
+<td style="text-align:left">150*150</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">Q80</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">S80</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">S300</td>
+<td style="text-align:left">83*83</td>
+<td style="text-align:left">BMP(24bit)</td>
+</tr>
+<tr>
+<td style="text-align:left">S500</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">S920</td>
+<td style="text-align:left">83*83</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">SP30</td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">N/A</td>
+</tr>
+<tr>
+<td style="text-align:left">A30</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A35</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A60</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A77</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A80</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A800</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A920</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A920 Pro</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A920 MAX</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A930</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">Aries6</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">Aries8</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A3700</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">A6650</td>
+<td style="text-align:left">Unlimited size</td>
+<td style="text-align:left">PNG</td>
+</tr>
+</tbody>
+</table>
+<h1 id="nacs-product-codes">NACS Product Codes</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Product Type</th>
+<th style="text-align:left">Product Code</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Unused</td>
+<td style="text-align:left">000</td>
+<td style="text-align:left">Not used.</td>
+</tr>
+<tr>
+<td style="text-align:left">Motor Fuel Codes</td>
+<td style="text-align:left">001</td>
+<td style="text-align:left">Unleaded (88 octane or less)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">002</td>
+<td style="text-align:left">Unleaded Plus(89-91 octane)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">003</td>
+<td style="text-align:left">Super Unleaded(92 octane or higher)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">004</td>
+<td style="text-align:left">Undefined Unleaded</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">005</td>
+<td style="text-align:left">Undefined Unleaded</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">006</td>
+<td style="text-align:left">Unleaded Methanol 5.7% Blend (88 octane or less)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">007</td>
+<td style="text-align:left">Unleaded Plus Methanol 5.7% Blend (89-91 octane or higher)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">008</td>
+<td style="text-align:left">Super Unleaded Methanol 5.7% Blend (92 octane or higher)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">009</td>
+<td style="text-align:left">Unleaded Methanol 7.7% Blend (88 octane or less)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">010</td>
+<td style="text-align:left">Unleaded Plus Methanol 7.7% Blend (89–91 octane)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">011</td>
+<td style="text-align:left">Unleaded Ethanol 5.7% Blend (88 octane or less)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">012</td>
+<td style="text-align:left">Unleaded Plus Ethanol 5.7% Blend (89–91 octane)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">013</td>
+<td style="text-align:left">Super Unleaded Ethanol 5.7% Blend (92 octane or higher)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">014</td>
+<td style="text-align:left">Unleaded Ethanol 7.7% Blend (88 octane or less)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">015</td>
+<td style="text-align:left">Unleaded Plus Ethanol 7.7% Blend (89–91 octane)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">016</td>
+<td style="text-align:left">Methanol/Leaded</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">017</td>
+<td style="text-align:left">Ethanol/Leaded</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">018</td>
+<td style="text-align:left">Leaded</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">019</td>
+<td style="text-align:left">Diesel</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">020</td>
+<td style="text-align:left">Diesel—Premium</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">021</td>
+<td style="text-align:left">Undefined Diesel</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">022</td>
+<td style="text-align:left">Compressed natural gas</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">023</td>
+<td style="text-align:left">Liquid propane gas</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">024</td>
+<td style="text-align:left">Liquid natural gas (compressed)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">025</td>
+<td style="text-align:left">M-85</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">026</td>
+<td style="text-align:left">E-85</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">027</td>
+<td style="text-align:left">Unleaded—Reformulated (88 octane or less)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">028</td>
+<td style="text-align:left">Unleaded—Reformulated (89–91 octane)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">029</td>
+<td style="text-align:left">Unleaded—Reformulated (92 octane or higher)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">030</td>
+<td style="text-align:left">Undefined Unleaded—Reformulated</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">031</td>
+<td style="text-align:left">Undefined Unleaded—Reformulated</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">032</td>
+<td style="text-align:left">Diesel—Off-road/Farm Fuel (nontaxable)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">033</td>
+<td style="text-align:left">Diesel—Refrigerator Fuel (nontaxable)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">034</td>
+<td style="text-align:left">Undefined Diesel (nontaxable)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">035</td>
+<td style="text-align:left">Other fuel (nontaxable)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">036</td>
+<td style="text-align:left">Racing fuel</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">037</td>
+<td style="text-align:left">Super Unleaded Methanol 7.7% Blend (92 octane or higher)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">038</td>
+<td style="text-align:left">Unleaded Methanol 10% Blend (88 octane or less)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">039</td>
+<td style="text-align:left">Unleaded Plus Methanol 10% Blend (89–91 octane)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">040</td>
+<td style="text-align:left">Super Unleaded Methanol 10% Blend (92 octane or higher)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">041</td>
+<td style="text-align:left">Upper Unleaded Ethanol 7.7% Blend (92 octane or higher)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">042</td>
+<td style="text-align:left">Unleaded Ethanol 10% Blend (88 octane or less)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">043</td>
+<td style="text-align:left">Unleaded Plus Ethanol 10% Blend (89–91 octane)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">044</td>
+<td style="text-align:left">Super Unleaded Ethanol 10% Blend (92 octane or higher)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">045</td>
+<td style="text-align:left">B2 Diesel Blend 2% Biodiesel</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">046</td>
+<td style="text-align:left">B5 Diesel Blend 5% Biodiesel</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">047</td>
+<td style="text-align:left">B10 Diesel Blend 10% Biodiesel</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">048</td>
+<td style="text-align:left">B11 Diesel Blend 11% Biodiesel</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">049</td>
+<td style="text-align:left">B15 Diesel Blend 15% Biodiesel</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">050</td>
+<td style="text-align:left">B20 Diesel Blend 20% Biodiesel</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">051</td>
+<td style="text-align:left">B100 Diesel Blend 100% Biodiesel</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">052-098</td>
+<td style="text-align:left">Undefined fuel</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">099</td>
+<td style="text-align:left">Miscellaneous fuel</td>
+</tr>
+<tr>
+<td style="text-align:left">Automotive Product/ Service Codes</td>
+<td style="text-align:left">100</td>
+<td style="text-align:left">General automotive merchandise</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">101</td>
+<td style="text-align:left">Motor oil</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">102</td>
+<td style="text-align:left">Car wash</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">103</td>
+<td style="text-align:left">Oil change</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">104</td>
+<td style="text-align:left">Oil filter</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">105</td>
+<td style="text-align:left">Work order</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">106</td>
+<td style="text-align:left">Antifreeze</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">107</td>
+<td style="text-align:left">Washer fluid</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">108</td>
+<td style="text-align:left">Brake fluid</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">109</td>
+<td style="text-align:left">Tires</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">110</td>
+<td style="text-align:left">Federal excise tax (tires)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">111</td>
+<td style="text-align:left">Tire rotation</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">112</td>
+<td style="text-align:left">Batteries</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">113</td>
+<td style="text-align:left">Lube</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">114</td>
+<td style="text-align:left">Inspection</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">115</td>
+<td style="text-align:left">Labor</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">116</td>
+<td style="text-align:left">Towing</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">117</td>
+<td style="text-align:left">Road service</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">118</td>
+<td style="text-align:left">Auto accessories</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">119</td>
+<td style="text-align:left">Auto parts</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">120</td>
+<td style="text-align:left">Preventative maintenance</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">121</td>
+<td style="text-align:left">Air conditioning service</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">122</td>
+<td style="text-align:left">Engine service</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">123</td>
+<td style="text-align:left">Transmission service</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">124</td>
+<td style="text-align:left">Brake service</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">125</td>
+<td style="text-align:left">Exhaust service</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">126</td>
+<td style="text-align:left">Body work</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">127</td>
+<td style="text-align:left">Automotive glass</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">128</td>
+<td style="text-align:left">Synthetic oil</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">129</td>
+<td style="text-align:left">Lamps</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">130</td>
+<td style="text-align:left">Wipers</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">131</td>
+<td style="text-align:left">Hoses</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">132</td>
+<td style="text-align:left">Tire-related (wheel balance, value stem)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">133</td>
+<td style="text-align:left">Repairs</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">134</td>
+<td style="text-align:left">Service packages</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">135</td>
+<td style="text-align:left">Automotive parking</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">136</td>
+<td style="text-align:left">Truck tank cleaning</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">137</td>
+<td style="text-align:left">Other lubricants</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">138</td>
+<td style="text-align:left">Automotive fuel additives/treatment (injected)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">139–148</td>
+<td style="text-align:left">Undefined part/service</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">149</td>
+<td style="text-align:left">Miscellaneous part/service</td>
+</tr>
+<tr>
+<td style="text-align:left">Aviation Fuel Codes</td>
+<td style="text-align:left">150</td>
+<td style="text-align:left">Jet Fuel</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">151</td>
+<td style="text-align:left">Aviation Fuel 1</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">152</td>
+<td style="text-align:left">Aviation Fuel 2</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">153</td>
+<td style="text-align:left">Aviation Fuel 3</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">154</td>
+<td style="text-align:left">Aviation Fuel 4</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">155</td>
+<td style="text-align:left">Aviation Fuel 5</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">156–173</td>
+<td style="text-align:left">Undefined aviation fuel</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">174</td>
+<td style="text-align:left">Miscellaneous aviation fuel</td>
+</tr>
+<tr>
+<td style="text-align:left">Aviation Product/ Service Codes</td>
+<td style="text-align:left">175</td>
+<td style="text-align:left">Storage</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">176</td>
+<td style="text-align:left">Aircraft ground handling</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">177</td>
+<td style="text-align:left">Aircraft ground power unit</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">178</td>
+<td style="text-align:left">Aircraft labor</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">179</td>
+<td style="text-align:left">Aircraft work order</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">180</td>
+<td style="text-align:left">Aircraft maintenance</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">181</td>
+<td style="text-align:left">Aircraft service</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">182</td>
+<td style="text-align:left">Transportation</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">183</td>
+<td style="text-align:left">De-icing</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">184</td>
+<td style="text-align:left">Ramp fees</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">185</td>
+<td style="text-align:left">Catering</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">186</td>
+<td style="text-align:left">Hangar fee</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">187</td>
+<td style="text-align:left">Landing fee</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">188</td>
+<td style="text-align:left">Call out fee</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">189</td>
+<td style="text-align:left">Aircraft rental</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">190</td>
+<td style="text-align:left">Instruction fee</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">191</td>
+<td style="text-align:left">Flight plans/weather brief</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">192</td>
+<td style="text-align:left">Charter fee</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">193</td>
+<td style="text-align:left">Communication fee</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">194</td>
+<td style="text-align:left">Aircraft cleaning</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">195</td>
+<td style="text-align:left">Cargo handling</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">196</td>
+<td style="text-align:left">Aircraft accessories</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">197–223</td>
+<td style="text-align:left">Undefined aviation</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">224</td>
+<td style="text-align:left">Miscellaneous aviation</td>
+</tr>
+<tr>
+<td style="text-align:left">Marine Fuel Codes</td>
+<td style="text-align:left">225</td>
+<td style="text-align:left">Marine Fuel 1</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">226</td>
+<td style="text-align:left">Marine Fuel 2</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">227</td>
+<td style="text-align:left">Marine Fuel 3</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">228</td>
+<td style="text-align:left">Marine Fuel 4</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">229</td>
+<td style="text-align:left">Marine Fuel 5</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">230</td>
+<td style="text-align:left">Marine—Other</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">231–248</td>
+<td style="text-align:left">Undefined marine fuel</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">249</td>
+<td style="text-align:left">Miscellaneous marine fuel</td>
+</tr>
+<tr>
+<td style="text-align:left">Marine Product/ Service Codes</td>
+<td style="text-align:left">250</td>
+<td style="text-align:left">Marine services</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">251</td>
+<td style="text-align:left">Marine labor</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">252</td>
+<td style="text-align:left">Marine work order</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">253</td>
+<td style="text-align:left">Launch fee</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">254</td>
+<td style="text-align:left">Slip rental</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">255–298</td>
+<td style="text-align:left">Undefined marine service</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">299</td>
+<td style="text-align:left">Miscellaneous marine service</td>
+</tr>
+<tr>
+<td style="text-align:left">Other Fuel Codes</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">Kerosene</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">301</td>
+<td style="text-align:left">White gas</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">302</td>
+<td style="text-align:left">Heating oil</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">303</td>
+<td style="text-align:left">Bottled propane (LPG)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">304</td>
+<td style="text-align:left">Other fuel (nontaxable)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">305–398</td>
+<td style="text-align:left">Undefined other fuel</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">399</td>
+<td style="text-align:left">Miscellaneous other fuel</td>
+</tr>
+<tr>
+<td style="text-align:left">Merchandise Codes</td>
+<td style="text-align:left">400</td>
+<td style="text-align:left">General merchandise</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">401</td>
+<td style="text-align:left">General ice</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">402–409</td>
+<td style="text-align:left">General undefined</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">410</td>
+<td style="text-align:left">General tobacco</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">411</td>
+<td style="text-align:left">Cigarettes</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">412</td>
+<td style="text-align:left">Tobacco—Other</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">413–419</td>
+<td style="text-align:left">Undefined tobacco</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">420</td>
+<td style="text-align:left">General packaged beverage</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">421</td>
+<td style="text-align:left">Packaged beverage (nonalcoholic)</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">422</td>
+<td style="text-align:left">Juice</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">423</td>
+<td style="text-align:left">Another packaged beverage</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">424–429</td>
+<td style="text-align:left">Undefined packaged beverage</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">430</td>
+<td style="text-align:left">General dispensed beverage</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">431</td>
+<td style="text-align:left">Hot dispensed beverage</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">432</td>
+<td style="text-align:left">Cold dispensed beverage</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">433</td>
+<td style="text-align:left">Frozen dispensed beverage</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">434</td>
+<td style="text-align:left">Another dispensed beverage</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">435–439</td>
+<td style="text-align:left">Undefined dispensed beverage</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">440</td>
+<td style="text-align:left">General snack</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">441</td>
+<td style="text-align:left">Salty snack</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">442</td>
+<td style="text-align:left">Alternative snack</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">443</td>
+<td style="text-align:left">Sweet snack—Packaged</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">444–449</td>
+<td style="text-align:left">Undefined snack</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">450</td>
+<td style="text-align:left">General candy</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">451–459</td>
+<td style="text-align:left">Undefined candy</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">460</td>
+<td style="text-align:left">General dairy</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">461</td>
+<td style="text-align:left">Fluid milk product</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">462</td>
+<td style="text-align:left">Packaged ice cream/novelty</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">463</td>
+<td style="text-align:left">Another dairy</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">464–469</td>
+<td style="text-align:left">Undefined dairy</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">470</td>
+<td style="text-align:left">General grocery</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">471</td>
+<td style="text-align:left">Groceries—Edible</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">472</td>
+<td style="text-align:left">Groceries—Nonedible</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">473</td>
+<td style="text-align:left">Groceries—Perishable</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">474</td>
+<td style="text-align:left">Bread—Packaged</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">475</td>
+<td style="text-align:left">Frozen food</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">476–479</td>
+<td style="text-align:left">Undefined grocery</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">480</td>
+<td style="text-align:left">General alcohol</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">481</td>
+<td style="text-align:left">Beer—Alcoholic</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">482</td>
+<td style="text-align:left">Beer—Nonalcoholic</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">483</td>
+<td style="text-align:left">Wine</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">484</td>
+<td style="text-align:left">Liquor</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">485–489</td>
+<td style="text-align:left">Undefined alcohol</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">490</td>
+<td style="text-align:left">General deli</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">491</td>
+<td style="text-align:left">Packaged sandwich/deli product</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">492</td>
+<td style="text-align:left">Prepared food</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">493</td>
+<td style="text-align:left">Deli item</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">494–499</td>
+<td style="text-align:left">Undefined deli</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">500</td>
+<td style="text-align:left">General food service</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">501–509</td>
+<td style="text-align:left">Undefined food service</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">510</td>
+<td style="text-align:left">General lottery</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">511</td>
+<td style="text-align:left">Lottery—Instant</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">512</td>
+<td style="text-align:left">Lottery—Online</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">513</td>
+<td style="text-align:left">Lottery—Other</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">514–519</td>
+<td style="text-align:left">Undefined lottery</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">520</td>
+<td style="text-align:left">General money order</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">521</td>
+<td style="text-align:left">Money order—Vendor payment</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">522</td>
+<td style="text-align:left">Money order—Payroll check</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">523</td>
+<td style="text-align:left">Money order—Gift certificate</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">524</td>
+<td style="text-align:left">Money order—Refund check</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">525</td>
+<td style="text-align:left">Money order—Official check</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">526</td>
+<td style="text-align:left">Money order—Rebate check</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">527</td>
+<td style="text-align:left">Money order—Dividend check</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">528</td>
+<td style="text-align:left">Money order—Utility check</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">529</td>
+<td style="text-align:left">Undefined money order</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">530</td>
+<td style="text-align:left">General store service</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">531</td>
+<td style="text-align:left">Home delivery</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">532</td>
+<td style="text-align:left">Prepaid card—Purchase</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">533</td>
+<td style="text-align:left">Prepaid card—Activation/Recharge</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">534–539</td>
+<td style="text-align:left">Undefined store service</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">540</td>
+<td style="text-align:left">General health and beauty care</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">541–549</td>
+<td style="text-align:left">Undefined health and beauty care</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">550</td>
+<td style="text-align:left">General publication</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">551–559</td>
+<td style="text-align:left">Undefined publication</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">560–599</td>
+<td style="text-align:left">Undefined merchandise</td>
+</tr>
+<tr>
+<td style="text-align:left">Codes Reserved for Future Use</td>
+<td style="text-align:left">600–799</td>
+<td style="text-align:left">Code Nos. 600–799 are reserved for future use</td>
+</tr>
+<tr>
+<td style="text-align:left">Debit Surcharge Codes</td>
+<td style="text-align:left">800</td>
+<td style="text-align:left">Administrative—Debit surcharge</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">801</td>
+<td style="text-align:left">Administrative—BUYPASS default tax</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">802</td>
+<td style="text-align:left">Administrative—BUYPASS default cash</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">803</td>
+<td style="text-align:left">Merchandise—BUYPASS default nonfuel/noncash/nontax</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">804</td>
+<td style="text-align:left">Merchandise—Other merchandise</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">805</td>
+<td style="text-align:left">Merchandise—Prepaid card</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">806</td>
+<td style="text-align:left">Merchandise—Split tender; use of prepaid card</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">807</td>
+<td style="text-align:left">Motor Fuels—Special</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">808</td>
+<td style="text-align:left">Motor Fuels—Extra</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">809</td>
+<td style="text-align:left">Negative Transaction—Tax exemption credit</td>
+</tr>
+<tr>
+<td style="text-align:left">Codes Reserved for Proprietary Use</td>
+<td style="text-align:left">810–889</td>
+<td style="text-align:left">Code Nos. 810–889 are reserved for proprietary use</td>
+</tr>
+<tr>
+<td style="text-align:left">Codes Reserved for future Use</td>
+<td style="text-align:left">895–899</td>
+<td style="text-align:left">Code Nos. 895–899 are reserved for future use</td>
+</tr>
+<tr>
+<td style="text-align:left">Negative Codes</td>
+<td style="text-align:left">900</td>
+<td style="text-align:left">Discount 1</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">901</td>
+<td style="text-align:left">Discount 2</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">902</td>
+<td style="text-align:left">Discount 3</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">903</td>
+<td style="text-align:left">Discount 4</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">904</td>
+<td style="text-align:left">Discount 5</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">905</td>
+<td style="text-align:left">Coupon 1</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">906</td>
+<td style="text-align:left">Coupon 2</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">907</td>
+<td style="text-align:left">Coupon 3</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">908</td>
+<td style="text-align:left">Coupon 4</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">909</td>
+<td style="text-align:left">Coupon 5</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">910</td>
+<td style="text-align:left">Lottery pay out—Instant</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">911</td>
+<td style="text-align:left">Lottery pay out—Online</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">912</td>
+<td style="text-align:left">Lottery pay out—Other</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">913</td>
+<td style="text-align:left">Split tender</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">914–948</td>
+<td style="text-align:left">Undefined negative</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">949</td>
+<td style="text-align:left">Miscellaneous negative administrative</td>
+</tr>
+<tr>
+<td style="text-align:left">Administrative Codes</td>
+<td style="text-align:left">950</td>
+<td style="text-align:left">Tax 1</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">951</td>
+<td style="text-align:left">Tax 2</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">952</td>
+<td style="text-align:left">Tax 3</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">953</td>
+<td style="text-align:left">Tax 4</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">954</td>
+<td style="text-align:left">Tax 5</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">955</td>
+<td style="text-align:left">Cash back</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">956</td>
+<td style="text-align:left">Cash back fee</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">957</td>
+<td style="text-align:left">Fee 1</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">958</td>
+<td style="text-align:left">Fee 2</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">959</td>
+<td style="text-align:left">Fee 3</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">960</td>
+<td style="text-align:left">Fee 4</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">961</td>
+<td style="text-align:left">Fee 5</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">962–998</td>
+<td style="text-align:left">Undefined administrative</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">999</td>
+<td style="text-align:left">Miscellaneous administrative</td>
+</tr>
+</tbody>
+</table>
+<h1 id="vehicle-class-id-definition">Vehicle Class ID definition</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Code</th>
+<th style="text-align:left">Vehicle class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0001</td>
+<td style="text-align:left">Mini</td>
+</tr>
+<tr>
+<td style="text-align:center">0002</td>
+<td style="text-align:left">Subcompact</td>
+</tr>
+<tr>
+<td style="text-align:center">0003</td>
+<td style="text-align:left">Economy</td>
+</tr>
+<tr>
+<td style="text-align:center">0004</td>
+<td style="text-align:left">Compact</td>
+</tr>
+<tr>
+<td style="text-align:center">0005</td>
+<td style="text-align:left">Midsize</td>
+</tr>
+<tr>
+<td style="text-align:center">0006</td>
+<td style="text-align:left">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align:center">0007</td>
+<td style="text-align:left">Standard</td>
+</tr>
+<tr>
+<td style="text-align:center">0008</td>
+<td style="text-align:left">Full size</td>
+</tr>
+<tr>
+<td style="text-align:center">0009</td>
+<td style="text-align:left">Luxury</td>
+</tr>
+<tr>
+<td style="text-align:center">0010</td>
+<td style="text-align:left">Premium</td>
+</tr>
+<tr>
+<td style="text-align:center">0011</td>
+<td style="text-align:left">Minivan</td>
+</tr>
+<tr>
+<td style="text-align:center">0012</td>
+<td style="text-align:left">12-Passenger van</td>
+</tr>
+<tr>
+<td style="text-align:center">0013</td>
+<td style="text-align:left">Moving van</td>
+</tr>
+<tr>
+<td style="text-align:center">0014</td>
+<td style="text-align:left">15-Passing van</td>
+</tr>
+<tr>
+<td style="text-align:center">0015</td>
+<td style="text-align:left">Cargo van</td>
+</tr>
+<tr>
+<td style="text-align:center">0016</td>
+<td style="text-align:left">12-foot truck</td>
+</tr>
+<tr>
+<td style="text-align:center">0017</td>
+<td style="text-align:left">20-foot truck</td>
+</tr>
+<tr>
+<td style="text-align:center">0018</td>
+<td style="text-align:left">24-foot truck</td>
+</tr>
+<tr>
+<td style="text-align:center">0018</td>
+<td style="text-align:left">26-foot truck</td>
+</tr>
+<tr>
+<td style="text-align:center">0020</td>
+<td style="text-align:left">Moped</td>
+</tr>
+<tr>
+<td style="text-align:center">0021</td>
+<td style="text-align:left">Stretch</td>
+</tr>
+<tr>
+<td style="text-align:center">0022</td>
+<td style="text-align:left">Regular</td>
+</tr>
+<tr>
+<td style="text-align:center">0023</td>
+<td style="text-align:left">Unique</td>
+</tr>
+<tr>
+<td style="text-align:center">0024</td>
+<td style="text-align:left">Exotic</td>
+</tr>
+<tr>
+<td style="text-align:center">0025</td>
+<td style="text-align:left">Small/medium truck</td>
+</tr>
+<tr>
+<td style="text-align:center">0026</td>
+<td style="text-align:left">Large truck</td>
+</tr>
+<tr>
+<td style="text-align:center">0027</td>
+<td style="text-align:left">Small SUV</td>
+</tr>
+<tr>
+<td style="text-align:center">0028</td>
+<td style="text-align:left">Medium SUV</td>
+</tr>
+<tr>
+<td style="text-align:center">0029</td>
+<td style="text-align:left">Large SUV</td>
+</tr>
+<tr>
+<td style="text-align:center">0030</td>
+<td style="text-align:left">Exotic SUV</td>
+</tr>
+<tr>
+<td style="text-align:center">0031</td>
+<td style="text-align:left">Four wheel drive</td>
+</tr>
+<tr>
+<td style="text-align:center">0032</td>
+<td style="text-align:left">Special</td>
+</tr>
+<tr>
+<td style="text-align:center">9999</td>
+<td style="text-align:left">Miscellaneous</td>
+</tr>
+<tr>
+<td style="text-align:center">4 spaces</td>
+<td style="text-align:left">Unused</td>
+</tr>
+</tbody>
+</table>
+<h1 id="country-code-definition">Country Code Definition</h1>
+<p>Two characters ISO 3166 country codes. Please refer to following link for more details.
+<a href="https://www.iso.org/iso-3166-country-codes.html">https://www.iso.org/iso-3166-country-codes.html</a> - Home page talking about the ISO 3166 country codes.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Country Name</th>
+<th style="text-align:center">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Canada</td>
+<td style="text-align:center">CA</td>
+</tr>
+<tr>
+<td style="text-align:left">United States</td>
+<td style="text-align:center">US</td>
+</tr>
+</tbody>
+</table>
+<h1 id="state-province-code-definition">State/Province Code Definition</h1>
+<p>Two characters state/province codes.</p>
+<p>Following table is for Canada.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">States/Territories</th>
+<th style="text-align:center">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Alberta</td>
+<td style="text-align:center">AB</td>
+</tr>
+<tr>
+<td style="text-align:left">British Columbia</td>
+<td style="text-align:center">BC</td>
+</tr>
+<tr>
+<td style="text-align:left">Manitoba</td>
+<td style="text-align:center">MB</td>
+</tr>
+<tr>
+<td style="text-align:left">New Brunswick</td>
+<td style="text-align:center">NB</td>
+</tr>
+<tr>
+<td style="text-align:left">Newfoundland + Labrador</td>
+<td style="text-align:center">NL</td>
+</tr>
+<tr>
+<td style="text-align:left">Northwest Territories</td>
+<td style="text-align:center">NT</td>
+</tr>
+<tr>
+<td style="text-align:left">Nova Scotia</td>
+<td style="text-align:center">NS</td>
+</tr>
+<tr>
+<td style="text-align:left">Nunavut</td>
+<td style="text-align:center">NU</td>
+</tr>
+<tr>
+<td style="text-align:left">Ontario</td>
+<td style="text-align:center">ON</td>
+</tr>
+<tr>
+<td style="text-align:left">Prince Edward Island</td>
+<td style="text-align:center">PE</td>
+</tr>
+<tr>
+<td style="text-align:left">Quebec</td>
+<td style="text-align:center">QC</td>
+</tr>
+<tr>
+<td style="text-align:left">Saskatchewan</td>
+<td style="text-align:center">SK</td>
+</tr>
+<tr>
+<td style="text-align:left">Yukon</td>
+<td style="text-align:center">YT</td>
+</tr>
+</tbody>
+</table>
+<p>Following table is for United States.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">States/Territories</th>
+<th style="text-align:center">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Alabama</td>
+<td style="text-align:center">AL</td>
+</tr>
+<tr>
+<td style="text-align:left">Alaska</td>
+<td style="text-align:center">AK</td>
+</tr>
+<tr>
+<td style="text-align:left">Arizona</td>
+<td style="text-align:center">AZ</td>
+</tr>
+<tr>
+<td style="text-align:left">Arkansas</td>
+<td style="text-align:center">AR</td>
+</tr>
+<tr>
+<td style="text-align:left">California</td>
+<td style="text-align:center">CA</td>
+</tr>
+<tr>
+<td style="text-align:left">Colorado</td>
+<td style="text-align:center">CO</td>
+</tr>
+<tr>
+<td style="text-align:left">Connecticut</td>
+<td style="text-align:center">CT</td>
+</tr>
+<tr>
+<td style="text-align:left">Delaware</td>
+<td style="text-align:center">DE</td>
+</tr>
+<tr>
+<td style="text-align:left">District of Columbia</td>
+<td style="text-align:center">DC</td>
+</tr>
+<tr>
+<td style="text-align:left">Florida</td>
+<td style="text-align:center">FL</td>
+</tr>
+<tr>
+<td style="text-align:left">Georgia</td>
+<td style="text-align:center">GA</td>
+</tr>
+<tr>
+<td style="text-align:left">Hawaii</td>
+<td style="text-align:center">HI</td>
+</tr>
+<tr>
+<td style="text-align:left">Idaho</td>
+<td style="text-align:center">ID</td>
+</tr>
+<tr>
+<td style="text-align:left">Illinois</td>
+<td style="text-align:center">IL</td>
+</tr>
+<tr>
+<td style="text-align:left">Indiana</td>
+<td style="text-align:center">IN</td>
+</tr>
+<tr>
+<td style="text-align:left">Iowa</td>
+<td style="text-align:center">IA</td>
+</tr>
+<tr>
+<td style="text-align:left">Kansas</td>
+<td style="text-align:center">KS</td>
+</tr>
+<tr>
+<td style="text-align:left">Kentucky</td>
+<td style="text-align:center">KY</td>
+</tr>
+<tr>
+<td style="text-align:left">Louisiana</td>
+<td style="text-align:center">LA</td>
+</tr>
+<tr>
+<td style="text-align:left">Maine</td>
+<td style="text-align:center">ME</td>
+</tr>
+<tr>
+<td style="text-align:left">Maryland</td>
+<td style="text-align:center">MD</td>
+</tr>
+<tr>
+<td style="text-align:left">Massachusetts</td>
+<td style="text-align:center">MA</td>
+</tr>
+<tr>
+<td style="text-align:left">Michigan</td>
+<td style="text-align:center">MI</td>
+</tr>
+<tr>
+<td style="text-align:left">Minnesota</td>
+<td style="text-align:center">MN</td>
+</tr>
+<tr>
+<td style="text-align:left">Mississippi</td>
+<td style="text-align:center">MS</td>
+</tr>
+<tr>
+<td style="text-align:left">Missouri</td>
+<td style="text-align:center">MO</td>
+</tr>
+<tr>
+<td style="text-align:left">Montana</td>
+<td style="text-align:center">MT</td>
+</tr>
+<tr>
+<td style="text-align:left">Nebraska</td>
+<td style="text-align:center">NE</td>
+</tr>
+<tr>
+<td style="text-align:left">Nevada</td>
+<td style="text-align:center">NV</td>
+</tr>
+<tr>
+<td style="text-align:left">New Hampshire</td>
+<td style="text-align:center">NH</td>
+</tr>
+<tr>
+<td style="text-align:left">New Jersey</td>
+<td style="text-align:center">NJ</td>
+</tr>
+<tr>
+<td style="text-align:left">New Mexico</td>
+<td style="text-align:center">NM</td>
+</tr>
+<tr>
+<td style="text-align:left">New York</td>
+<td style="text-align:center">NY</td>
+</tr>
+<tr>
+<td style="text-align:left">North Carolina</td>
+<td style="text-align:center">NC</td>
+</tr>
+<tr>
+<td style="text-align:left">North Dakota</td>
+<td style="text-align:center">ND</td>
+</tr>
+<tr>
+<td style="text-align:left">Ohio</td>
+<td style="text-align:center">OH</td>
+</tr>
+<tr>
+<td style="text-align:left">Oklahoma</td>
+<td style="text-align:center">OK</td>
+</tr>
+<tr>
+<td style="text-align:left">Oregon</td>
+<td style="text-align:center">OR</td>
+</tr>
+<tr>
+<td style="text-align:left">Pennsylvania</td>
+<td style="text-align:center">PA</td>
+</tr>
+<tr>
+<td style="text-align:left">Puerto Rico</td>
+<td style="text-align:center">PR</td>
+</tr>
+<tr>
+<td style="text-align:left">Rhode Island</td>
+<td style="text-align:center">RI</td>
+</tr>
+<tr>
+<td style="text-align:left">South Carolina</td>
+<td style="text-align:center">SC</td>
+</tr>
+<tr>
+<td style="text-align:left">South Dakota</td>
+<td style="text-align:center">SD</td>
+</tr>
+<tr>
+<td style="text-align:left">Tennessee</td>
+<td style="text-align:center">TN</td>
+</tr>
+<tr>
+<td style="text-align:left">Texas</td>
+<td style="text-align:center">TX</td>
+</tr>
+<tr>
+<td style="text-align:left">Utah</td>
+<td style="text-align:center">UT</td>
+</tr>
+<tr>
+<td style="text-align:left">Vermont</td>
+<td style="text-align:center">VT</td>
+</tr>
+<tr>
+<td style="text-align:left">Virginia</td>
+<td style="text-align:center">VA</td>
+</tr>
+<tr>
+<td style="text-align:left">Washington</td>
+<td style="text-align:center">WA</td>
+</tr>
+<tr>
+<td style="text-align:left">West Virginia</td>
+<td style="text-align:center">WV</td>
+</tr>
+<tr>
+<td style="text-align:left">Wisconsin</td>
+<td style="text-align:center">WI</td>
+</tr>
+<tr>
+<td style="text-align:left">Wyoming</td>
+<td style="text-align:center">WY</td>
+</tr>
+<tr>
+<td style="text-align:left">American Samoa</td>
+<td style="text-align:center">AS</td>
+</tr>
+<tr>
+<td style="text-align:left">Guam</td>
+<td style="text-align:center">GU</td>
+</tr>
+<tr>
+<td style="text-align:left">Northern Mariana Islands</td>
+<td style="text-align:center">MP</td>
+</tr>
+<tr>
+<td style="text-align:left">Virgin Islands</td>
+<td style="text-align:center">VI</td>
+</tr>
+<tr>
+<td style="text-align:left">Federated States of Micronesia</td>
+<td style="text-align:center">FM</td>
+</tr>
+<tr>
+<td style="text-align:left">Marshall Islands</td>
+<td style="text-align:center">MH</td>
+</tr>
+<tr>
+<td style="text-align:left">Palau</td>
+<td style="text-align:center">PW</td>
+</tr>
+</tbody>
+</table>
+<h1 id="glossary">Glossary</h1>
+<p>POS - Point of Sale<br>
+ECR - Electronic Cash Register<br>
+EDC - Electronic Draft Capture<br>
+SAF - Store &amp; Forward<br>
+FPS - Fast Payment Service<br>
+TOR - Timeout Reversal<br>
+QSR - Quick Service Restaurant<br>
+FSA - Flexible Spending Accounts<br>
+HAS - Health Savings Account<br>
+EBT - Electronic Benefit Transfer<br>
+FNS - Food and Nutrition Service<br>
+WIC - EBT Women Infants Children<br>
+eWIC - the administration of WIC benefits using an electronic payment card.<br>
+VCPS - Visa Contactless Payment Specification, a.k.a. Paywave<br>
+MCL - Mastercard Contactless, a.k.a. Paypass<br>
+JCB CL - JCB Contactless, a.k.a. JSpeedy<br></p>
+
+          	</article>
+        </div>
+		</div>
+  </body>
+</html>
+<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+<script type="text/javascript" src="toc_conf.js"></script>
+
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+    var css_conf = eval(markdown_panel_style);
+    $('#readme').css(css_conf)
+    
+    var conf = eval(jquery_ztree_toc_opts);
+		$('#tree').ztree_toc(conf);
+});
+//-->
+</SCRIPT>

@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\POSLinkUart\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{199CE835-526B-4075-981F-124DBD48121D}|POSLinkUart\\POSLinkUart.csproj|e:\\aimarketingcentral\\document\\focre\\poslink_full_integration_.net_standard_v2.01.00_20250110\\samples\\poslinkuart\\poslinkuart\\uartsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{199CE835-526B-4075-981F-124DBD48121D}|POSLinkUart\\POSLinkUart.csproj|solutionrelative:poslinkuart\\uartsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d8444882-b4f5-4533-8e96-e2582560a2d7}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UartSetting.cs",
+              "DocumentMoniker": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\POSLinkUart\\POSLinkUart\\UartSetting.cs",
+              "RelativeDocumentMoniker": "POSLinkUart\\UartSetting.cs",
+              "ToolTip": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\POSLinkUart\\POSLinkUart\\UartSetting.cs",
+              "RelativeToolTip": "POSLinkUart\\UartSetting.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAwEkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T02:28:24.287Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['valueblockformaterror_0',['ValueBlockFormatError',['../class_p_o_s_link_admin_1_1_response_code.html#a4050a6a58868ef816c4f96daae78b797',1,'POSLinkAdmin::ResponseCode']]],
+  ['varnamemissing_1',['VarNameMissing',['../class_p_o_s_link_admin_1_1_response_code.html#a2aee644b8e60eb2a0a80448562bac987',1,'POSLinkAdmin::ResponseCode']]],
+  ['vaserror_2',['VasError',['../class_p_o_s_link_admin_1_1_response_code.html#a6ad91b60f85c4b8e977845a031bbd20b',1,'POSLinkAdmin::ResponseCode']]],
+  ['vaserrorpaymenterror_3',['VasErrorPaymentError',['../class_p_o_s_link_admin_1_1_response_code.html#ac716a16346d98c38d75875ab6dd1eae6',1,'POSLinkAdmin::ResponseCode']]],
+  ['vaserrorpaymentnotperformed_4',['VasErrorPaymentNotPerformed',['../class_p_o_s_link_admin_1_1_response_code.html#a5134449da48dc7548cac85b3605d72be',1,'POSLinkAdmin::ResponseCode']]],
+  ['vaserrorpaymentok_5',['VasErrorPaymentOk',['../class_p_o_s_link_admin_1_1_response_code.html#a094792df8a96e10a21168991ec8eab7c',1,'POSLinkAdmin::ResponseCode']]],
+  ['vaskeyfilemappingerror_6',['VasKeyFileMappingError',['../class_p_o_s_link_admin_1_1_response_code.html#ae176ab08953ebc87fe69178cc5af068c',1,'POSLinkAdmin::ResponseCode']]],
+  ['vasokpaymenterror_7',['VasOkPaymentError',['../class_p_o_s_link_admin_1_1_response_code.html#a19bccb69770d10484b53bdaa22f10a1f',1,'POSLinkAdmin::ResponseCode']]],
+  ['vasokpaymentnotperformed_8',['VasOkPaymentNotPerformed',['../class_p_o_s_link_admin_1_1_response_code.html#a340ecda2dab13415c60ade387f597fef',1,'POSLinkAdmin::ResponseCode']]],
+  ['vatinvoiceinvalid_9',['VatInvoiceInvalid',['../class_p_o_s_link_admin_1_1_code100003.html#a03c392e6d1012fdebe67bb64f40d765d',1,'POSLinkAdmin::Code100003']]],
+  ['vattaxamountinvalid_10',['VatTaxAmountInvalid',['../class_p_o_s_link_admin_1_1_code100003.html#a8ce230e5b90c59d0172918fec4814d1e',1,'POSLinkAdmin::Code100003']]],
+  ['vattaxrateinvalid_11',['VatTaxRateInvalid',['../class_p_o_s_link_admin_1_1_code100003.html#a7b5c990b3d36ce1eb1d58f612d4a50ef',1,'POSLinkAdmin::Code100003']]],
+  ['vehicleclassidinvalid_12',['VehicleClassIdInvalid',['../class_p_o_s_link_admin_1_1_code100003.html#a7af107b91ecb669a1b29eda3e93c400e',1,'POSLinkAdmin::Code100003']]],
+  ['vehicleidinvalid_13',['VehicleIdInvalid',['../class_p_o_s_link_admin_1_1_code100003.html#af0071e0ecc12d5eaddeb2a7fbb10a0c9',1,'POSLinkAdmin::Code100003']]],
+  ['vehicleidmissing_14',['VehicleIdMissing',['../class_p_o_s_link_admin_1_1_code100003.html#afdd4deb5981dd6b9e5d32bea8b77215b',1,'POSLinkAdmin::Code100003']]],
+  ['vehiclenoinvalid_15',['VehicleNoInvalid',['../class_p_o_s_link_admin_1_1_code100003.html#a1f0e2b78e568dd00ef95d695f0c46943',1,'POSLinkAdmin::Code100003']]],
+  ['vehiclenomissing_16',['VehicleNoMissing',['../class_p_o_s_link_admin_1_1_code100003.html#af116087d765fdfc91628dc013e810ddc',1,'POSLinkAdmin::Code100003']]],
+  ['visacardonly_17',['VisaCardOnly',['../class_p_o_s_link_admin_1_1_code100003.html#a92c8ff9e9d1a021ce7a2a37de0b1a4ed',1,'POSLinkAdmin::Code100003']]],
+  ['visamastercardonly_18',['VisaMastercardOnly',['../class_p_o_s_link_admin_1_1_code100003.html#a878bc182008e8073a1236e509cd45008',1,'POSLinkAdmin::Code100003']]],
+  ['voidbyreferencenotsupported_19',['VoidByReferenceNotSupported',['../class_p_o_s_link_admin_1_1_code100003.html#aa01dbe7db6bf341cd2293d0bad24bc22',1,'POSLinkAdmin::Code100003']]],
+  ['voucherinvalid_20',['VoucherInvalid',['../class_p_o_s_link_admin_1_1_code100003.html#a75c7909c08dbf69a3a6ce26cbefb96da',1,'POSLinkAdmin::Code100003']]],
+  ['vouchernotallowed_21',['VoucherNotAllowed',['../class_p_o_s_link_admin_1_1_code100003.html#ad42140765317cfaed1e5265f7103021d',1,'POSLinkAdmin::Code100003']]]
+];

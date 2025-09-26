@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0"><assemblyIdentity name="POSLinkUart" version="2.0.0.0" publicKeyToken="b232b003e7332940" processorArchitecture="msil"></assemblyIdentity><clrClass clsid="{B9D52281-F4C6-4B53-A8C5-3FD9314899A7}" progid="POSLinkUart.UartSetting" threadingModel="Both" name="POSLinkUart.UartSetting" runtimeVersion="v4.0.30319"></clrClass><file name="poslink2-dotnet/Demo/POSLinkUart/POSLinkUart/bin/Release/POSLinkUart.dll" hashalg="SHA1"></file></assembly>

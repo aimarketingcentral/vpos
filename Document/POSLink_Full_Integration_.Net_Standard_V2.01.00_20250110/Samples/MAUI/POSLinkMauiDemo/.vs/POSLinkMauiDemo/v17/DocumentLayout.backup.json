@@ -1,0 +1,142 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\POSLinkMauiDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A957D187-7BA2-41C4-9DB7-1AFD9AD291DE}|POSLinkMauiDemo\\POSLinkMauiDemo.csproj|e:\\aimarketingcentral\\document\\focre\\poslink_full_integration_.net_standard_v2.01.00_20250110\\samples\\maui\\poslinkmauidemo\\poslinkmauidemo\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A957D187-7BA2-41C4-9DB7-1AFD9AD291DE}|POSLinkMauiDemo\\POSLinkMauiDemo.csproj|solutionrelative:poslinkmauidemo\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A957D187-7BA2-41C4-9DB7-1AFD9AD291DE}|POSLinkMauiDemo\\POSLinkMauiDemo.csproj|e:\\aimarketingcentral\\document\\focre\\poslink_full_integration_.net_standard_v2.01.00_20250110\\samples\\maui\\poslinkmauidemo\\poslinkmauidemo\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A957D187-7BA2-41C4-9DB7-1AFD9AD291DE}|POSLinkMauiDemo\\POSLinkMauiDemo.csproj|solutionrelative:poslinkmauidemo\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A957D187-7BA2-41C4-9DB7-1AFD9AD291DE}|POSLinkMauiDemo\\POSLinkMauiDemo.csproj|e:\\aimarketingcentral\\document\\focre\\poslink_full_integration_.net_standard_v2.01.00_20250110\\samples\\maui\\poslinkmauidemo\\poslinkmauidemo\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A957D187-7BA2-41C4-9DB7-1AFD9AD291DE}|POSLinkMauiDemo\\POSLinkMauiDemo.csproj|solutionrelative:poslinkmauidemo\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.305\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A957D187-7BA2-41C4-9DB7-1AFD9AD291DE}|POSLinkMauiDemo\\POSLinkMauiDemo.csproj|e:\\aimarketingcentral\\document\\focre\\poslink_full_integration_.net_standard_v2.01.00_20250110\\samples\\maui\\poslinkmauidemo\\poslinkmauidemo\\dll\\poslinkfullintegration.xml||{6B79B2C4-8503-4A04-8248-ADCEF2B49CB1}",
+      "RelativeMoniker": "D:0:0:{A957D187-7BA2-41C4-9DB7-1AFD9AD291DE}|POSLinkMauiDemo\\POSLinkMauiDemo.csproj|solutionrelative:poslinkmauidemo\\dll\\poslinkfullintegration.xml||{6B79B2C4-8503-4A04-8248-ADCEF2B49CB1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A957D187-7BA2-41C4-9DB7-1AFD9AD291DE}|POSLinkMauiDemo\\POSLinkMauiDemo.csproj|e:\\aimarketingcentral\\document\\focre\\poslink_full_integration_.net_standard_v2.01.00_20250110\\samples\\maui\\poslinkmauidemo\\poslinkmauidemo\\aidl\\poslinkbridge.aidl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A957D187-7BA2-41C4-9DB7-1AFD9AD291DE}|POSLinkMauiDemo\\POSLinkMauiDemo.csproj|solutionrelative:poslinkmauidemo\\aidl\\poslinkbridge.aidl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A957D187-7BA2-41C4-9DB7-1AFD9AD291DE}|POSLinkMauiDemo\\POSLinkMauiDemo.csproj|e:\\aimarketingcentral\\document\\focre\\poslink_full_integration_.net_standard_v2.01.00_20250110\\samples\\maui\\poslinkmauidemo\\poslinkmauidemo\\poslinkmauidemo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{A957D187-7BA2-41C4-9DB7-1AFD9AD291DE}|POSLinkMauiDemo\\POSLinkMauiDemo.csproj|solutionrelative:poslinkmauidemo\\poslinkmauidemo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d8444882-b4f5-4533-8e96-e2582560a2d7}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\POSLinkMauiDemo\\POSLinkMauiDemo\\AppShell.xaml",
+              "RelativeDocumentMoniker": "POSLinkMauiDemo\\AppShell.xaml",
+              "ToolTip": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\POSLinkMauiDemo\\POSLinkMauiDemo\\AppShell.xaml",
+              "RelativeToolTip": "POSLinkMauiDemo\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-25T03:31:10.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Microsoft.PackageDependencyResolution.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.305\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.305\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ViewState": "AgIAAPQAAAAAAAAAAIAwwAkBAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-09-25T02:58:20.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "POSLinkFullIntegration.xml",
+              "DocumentMoniker": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\POSLinkMauiDemo\\POSLinkMauiDemo\\dll\\POSLinkFullIntegration.xml",
+              "RelativeDocumentMoniker": "POSLinkMauiDemo\\dll\\POSLinkFullIntegration.xml",
+              "ToolTip": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\POSLinkMauiDemo\\POSLinkMauiDemo\\dll\\POSLinkFullIntegration.xml",
+              "RelativeToolTip": "POSLinkMauiDemo\\dll\\POSLinkFullIntegration.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-09-25T02:43:45.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "POSLinkBridge.aidl",
+              "DocumentMoniker": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\POSLinkMauiDemo\\POSLinkMauiDemo\\Aidl\\POSLinkBridge.aidl",
+              "RelativeDocumentMoniker": "POSLinkMauiDemo\\Aidl\\POSLinkBridge.aidl",
+              "ToolTip": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\POSLinkMauiDemo\\POSLinkMauiDemo\\Aidl\\POSLinkBridge.aidl",
+              "RelativeToolTip": "POSLinkMauiDemo\\Aidl\\POSLinkBridge.aidl",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-25T02:43:39.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\POSLinkMauiDemo\\POSLinkMauiDemo\\MainPage.xaml",
+              "RelativeDocumentMoniker": "POSLinkMauiDemo\\MainPage.xaml",
+              "ToolTip": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\POSLinkMauiDemo\\POSLinkMauiDemo\\MainPage.xaml",
+              "RelativeToolTip": "POSLinkMauiDemo\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-25T02:42:37.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "POSLinkMauiDemo",
+              "DocumentMoniker": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\POSLinkMauiDemo\\POSLinkMauiDemo\\POSLinkMauiDemo.csproj",
+              "RelativeDocumentMoniker": "POSLinkMauiDemo\\POSLinkMauiDemo.csproj",
+              "ToolTip": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\POSLinkMauiDemo\\POSLinkMauiDemo\\POSLinkMauiDemo.csproj",
+              "RelativeToolTip": "POSLinkMauiDemo\\POSLinkMauiDemo.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-25T02:40:40.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\POSLinkMauiDemo\\POSLinkMauiDemo\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "POSLinkMauiDemo\\MauiProgram.cs",
+              "ToolTip": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\POSLinkMauiDemo\\POSLinkMauiDemo\\MauiProgram.cs",
+              "RelativeToolTip": "POSLinkMauiDemo\\MauiProgram.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T02:37:58.574Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

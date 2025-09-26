@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['cancel_0',['Cancel',['../namespace_p_o_s_link_admin_1_1_const.html#a570277ad3cfe4f0ab0a541a17504c157aea4788705e6873b424c65e91c2846b19',1,'POSLinkAdmin::Const']]],
+  ['cardinserted_1',['CardInserted',['../namespace_p_o_s_link_admin_1_1_const.html#a50ad58c14707526eedc6708a1445f7c0ac6073f6930d677aac6b238cc76fd5d75',1,'POSLinkAdmin::Const']]],
+  ['cash_2',['Cash',['../namespace_p_o_s_link_admin_1_1_const.html#a4fe04a7b233c77da12bc0de3b6df926aa069b30db06d047a398f9eb0940d3279c',1,'POSLinkAdmin::Const']]],
+  ['cashout_3',['Cashout',['../namespace_p_o_s_link_admin_1_1_const.html#a7861ad0b4763c62691c3d7b01ec371dca3ac4442ab2ca09b54afb9756363c968e',1,'POSLinkAdmin::Const']]],
+  ['checkbox_4',['CheckBox',['../namespace_p_o_s_link_admin_1_1_const.html#af6028fcdc63ed28895534b394f6e1f0ea7ea0f1332ade5b23b34502a3bfe715a2',1,'POSLinkAdmin::Const']]],
+  ['checked_5',['Checked',['../namespace_p_o_s_link_admin_1_1_const.html#af06e87481ad3f61166772d28d4220532a2627637e263ef687fa978b576580b8b1',1,'POSLinkAdmin::Const']]],
+  ['chinese_6',['Chinese',['../namespace_p_o_s_link_admin_1_1_const.html#af19c61d51865e66448c11217aba76253a3b261136e3c33f35e0a58611b1f344cb',1,'POSLinkAdmin::Const']]],
+  ['chip_7',['Chip',['../namespace_p_o_s_link_admin_1_1_const.html#a2abb9576d9856d0d697b758308623ff8ae61e34b450f37e2668daf2318dcaf978',1,'POSLinkAdmin::Const']]],
+  ['chipfallbackswipe_8',['ChipFallBackSwipe',['../namespace_p_o_s_link_admin_1_1_const.html#a2abb9576d9856d0d697b758308623ff8a3e0817ec5a395a586708f573118fb510',1,'POSLinkAdmin::Const']]],
+  ['clear_9',['Clear',['../namespace_p_o_s_link_admin_1_1_const.html#a570277ad3cfe4f0ab0a541a17504c157adc30bc0c7914db5918da4263fce93ad2',1,'POSLinkAdmin::Const']]],
+  ['code128_10',['Code128',['../namespace_p_o_s_link_admin_1_1_const.html#a4f95e5a6f256a009e85cc3d4eae2a28ba226da73c6cd6c9ac14ff53b3fac3fcc1',1,'POSLinkAdmin::Const']]],
+  ['code39_11',['Code39',['../namespace_p_o_s_link_admin_1_1_const.html#a4f95e5a6f256a009e85cc3d4eae2a28ba8994f6d58b3754a0f7aaba6f3095d16c',1,'POSLinkAdmin::Const']]],
+  ['communicationerror_12',['CommunicationError',['../class_p_o_s_link_admin_1_1_upload_result.html#adbf3ee69cff084c804509ad7bb09f3bdadb3f55cd913a0331acdfa5fa1da8323a',1,'POSLinkAdmin::UploadResult']]],
+  ['connecterror_13',['ConnectError',['../class_p_o_s_link_admin_1_1_execution_result.html#a850dfeb5162e8d28a6b1ed73841b5853a3b26f2ffccae97443db33944eda7b269',1,'POSLinkAdmin.ExecutionResult.ConnectError()'],['../class_p_o_s_link_admin_1_1_upload_result.html#adbf3ee69cff084c804509ad7bb09f3bda3b26f2ffccae97443db33944eda7b269',1,'POSLinkAdmin.UploadResult.ConnectError()']]],
+  ['connecthostfailed_14',['ConnectHostFailed',['../namespace_p_o_s_link_full_integration_1_1_const.html#adb0ea2ed7757261ca8b2bc60aaa48aefa88fe661b0be27104ce3a23561f3e75c5',1,'POSLinkFullIntegration::Const']]],
+  ['contactless_15',['Contactless',['../namespace_p_o_s_link_admin_1_1_const.html#a2abb9576d9856d0d697b758308623ff8a535152ec074ae603afdc667c4c252da0',1,'POSLinkAdmin::Const']]],
+  ['convert_16',['Convert',['../namespace_p_o_s_link_admin_1_1_const.html#a7861ad0b4763c62691c3d7b01ec371dca920f4a0c5c8b9a0747380cf7c7f0b3c5',1,'POSLinkAdmin::Const']]],
+  ['credit_17',['Credit',['../namespace_p_o_s_link_admin_1_1_const.html#a4fe04a7b233c77da12bc0de3b6df926aa0a90b1bc4078f74b6f0d117ec7df65af',1,'POSLinkAdmin::Const']]],
+  ['currency_18',['Currency',['../namespace_p_o_s_link_admin_1_1_const.html#a49b78f0de3e3344c13c389242fb3b828a386c339d37e737a436499d423a77df0c',1,'POSLinkAdmin::Const']]],
+  ['customeronly_19',['CustomerOnly',['../namespace_p_o_s_link_admin_1_1_const.html#a53b5625c159ecccf68f258844c3021d0a131e58117e27bfccafb993842848fdcc',1,'POSLinkAdmin::Const']]]
+];

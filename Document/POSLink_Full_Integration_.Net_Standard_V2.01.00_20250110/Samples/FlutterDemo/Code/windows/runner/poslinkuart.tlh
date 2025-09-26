@@ -1,0 +1,81 @@
+﻿
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("199ce835-526b-4075-981f-124dbd48121d"))
+/* LIBID */ __POSLinkUart;
+struct /* coclass */ UartSetting;
+struct __declspec(uuid("326cce95-cdc1-3b20-8a51-0d065969e155"))
+/* dual interface */ _UartSetting;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_UartSetting, __uuidof(_UartSetting));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("b9d52281-f4c6-4b53-a8c5-3fd9314899a7"))
+UartSetting;
+    // [ default ] interface _UartSetting
+    // interface _CustomerCommunicationSetting
+    // interface _CommunicationSetting
+    // interface _Object
+
+struct __declspec(uuid("326cce95-cdc1-3b20-8a51-0d065969e155"))
+_UartSetting : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_ToString (
+        /*[out,retval]*/ BSTR * pRetVal ) = 0;
+      virtual HRESULT __stdcall Equals (
+        /*[in]*/ VARIANT obj,
+        /*[out,retval]*/ VARIANT_BOOL * pRetVal ) = 0;
+      virtual HRESULT __stdcall GetHashCode (
+        /*[out,retval]*/ long * pRetVal ) = 0;
+      virtual HRESULT __stdcall GetType (
+        /*[out,retval]*/ struct _Type * * pRetVal ) = 0;
+      virtual HRESULT __stdcall IsSameCommunication (
+        /*[in]*/ struct _CustomerCommunicationSetting * setting,
+        /*[out,retval]*/ VARIANT_BOOL * pRetVal ) = 0;
+      virtual HRESULT __stdcall Open ( ) = 0;
+      virtual HRESULT __stdcall Write (
+        /*[in]*/ SAFEARRAY * buffer,
+        /*[in]*/ long offset,
+        /*[in]*/ long count ) = 0;
+      virtual HRESULT __stdcall Read (
+        /*[in,out]*/ SAFEARRAY * * buffer,
+        /*[in]*/ long offset,
+        /*[in]*/ long count,
+        /*[out,retval]*/ long * pRetVal ) = 0;
+      virtual HRESULT __stdcall Close ( ) = 0;
+      virtual HRESULT __stdcall get_Timeout (
+        /*[out,retval]*/ long * pRetVal ) = 0;
+      virtual HRESULT __stdcall put_Timeout (
+        /*[in]*/ long pRetVal ) = 0;
+      virtual HRESULT __stdcall get_SerialPortName (
+        /*[out,retval]*/ BSTR * pRetVal ) = 0;
+      virtual HRESULT __stdcall put_SerialPortName (
+        /*[in]*/ BSTR pRetVal ) = 0;
+      virtual HRESULT __stdcall get_BaudRate (
+        /*[out,retval]*/ long * pRetVal ) = 0;
+      virtual HRESULT __stdcall put_BaudRate (
+        /*[in]*/ long pRetVal ) = 0;
+      virtual HRESULT __stdcall IsCommSettingLegal (
+        /*[out,retval]*/ VARIANT_BOOL * pRetVal ) = 0;
+};
+
+#pragma pack(pop)

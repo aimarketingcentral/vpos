@@ -1,0 +1,96 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\GlCommBinding\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{23430B97-BFF1-46B0-BEEE-B1C1F8FDE679}|GlCommBinding\\GlCommBinding.csproj|e:\\aimarketingcentral\\document\\focre\\poslink_full_integration_.net_standard_v2.01.00_20250110\\samples\\maui\\glcommbinding\\glcommbinding\\additions\\aboutadditions.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{23430B97-BFF1-46B0-BEEE-B1C1F8FDE679}|GlCommBinding\\GlCommBinding.csproj|solutionrelative:glcommbinding\\additions\\aboutadditions.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23430B97-BFF1-46B0-BEEE-B1C1F8FDE679}|GlCommBinding\\GlCommBinding.csproj|e:\\aimarketingcentral\\document\\focre\\poslink_full_integration_.net_standard_v2.01.00_20250110\\samples\\maui\\glcommbinding\\glcommbinding\\transforms\\metadata.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{23430B97-BFF1-46B0-BEEE-B1C1F8FDE679}|GlCommBinding\\GlCommBinding.csproj|solutionrelative:glcommbinding\\transforms\\metadata.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23430B97-BFF1-46B0-BEEE-B1C1F8FDE679}|GlCommBinding\\GlCommBinding.csproj|e:\\aimarketingcentral\\document\\focre\\poslink_full_integration_.net_standard_v2.01.00_20250110\\samples\\maui\\glcommbinding\\glcommbinding\\transforms\\enummethods.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{23430B97-BFF1-46B0-BEEE-B1C1F8FDE679}|GlCommBinding\\GlCommBinding.csproj|solutionrelative:glcommbinding\\transforms\\enummethods.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23430B97-BFF1-46B0-BEEE-B1C1F8FDE679}|GlCommBinding\\GlCommBinding.csproj|e:\\aimarketingcentral\\document\\focre\\poslink_full_integration_.net_standard_v2.01.00_20250110\\samples\\maui\\glcommbinding\\glcommbinding\\transforms\\enumfields.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{23430B97-BFF1-46B0-BEEE-B1C1F8FDE679}|GlCommBinding\\GlCommBinding.csproj|solutionrelative:glcommbinding\\transforms\\enumfields.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d8444882-b4f5-4533-8e96-e2582560a2d7}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AboutAdditions.txt",
+              "DocumentMoniker": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\GlCommBinding\\GlCommBinding\\Additions\\AboutAdditions.txt",
+              "RelativeDocumentMoniker": "GlCommBinding\\Additions\\AboutAdditions.txt",
+              "ToolTip": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\GlCommBinding\\GlCommBinding\\Additions\\AboutAdditions.txt",
+              "RelativeToolTip": "GlCommBinding\\Additions\\AboutAdditions.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-09-25T02:30:57.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Metadata.xml",
+              "DocumentMoniker": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\GlCommBinding\\GlCommBinding\\Transforms\\Metadata.xml",
+              "RelativeDocumentMoniker": "GlCommBinding\\Transforms\\Metadata.xml",
+              "ToolTip": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\GlCommBinding\\GlCommBinding\\Transforms\\Metadata.xml",
+              "RelativeToolTip": "GlCommBinding\\Transforms\\Metadata.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-09-25T02:30:50.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnumMethods.xml",
+              "DocumentMoniker": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\GlCommBinding\\GlCommBinding\\Transforms\\EnumMethods.xml",
+              "RelativeDocumentMoniker": "GlCommBinding\\Transforms\\EnumMethods.xml",
+              "ToolTip": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\GlCommBinding\\GlCommBinding\\Transforms\\EnumMethods.xml",
+              "RelativeToolTip": "GlCommBinding\\Transforms\\EnumMethods.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-09-25T02:30:48.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EnumFields.xml",
+              "DocumentMoniker": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\GlCommBinding\\GlCommBinding\\Transforms\\EnumFields.xml",
+              "RelativeDocumentMoniker": "GlCommBinding\\Transforms\\EnumFields.xml",
+              "ToolTip": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\MAUI\\GlCommBinding\\GlCommBinding\\Transforms\\EnumFields.xml",
+              "RelativeToolTip": "GlCommBinding\\Transforms\\EnumFields.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-09-25T02:30:47.088Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

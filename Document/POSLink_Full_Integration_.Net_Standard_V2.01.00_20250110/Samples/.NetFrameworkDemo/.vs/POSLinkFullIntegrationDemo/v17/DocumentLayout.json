@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\.NetFrameworkDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{277A04FF-C26C-44A6-BFF0-0F12B31B4388}|POSLinkFullIntegrationDemo\\POSLinkFullIntegrationDemo.csproj|e:\\aimarketingcentral\\document\\focre\\poslink_full_integration_.net_standard_v2.01.00_20250110\\samples\\.netframeworkdemo\\poslinkfullintegrationdemo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{277A04FF-C26C-44A6-BFF0-0F12B31B4388}|POSLinkFullIntegrationDemo\\POSLinkFullIntegrationDemo.csproj|solutionrelative:poslinkfullintegrationdemo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{277A04FF-C26C-44A6-BFF0-0F12B31B4388}|POSLinkFullIntegrationDemo\\POSLinkFullIntegrationDemo.csproj|e:\\aimarketingcentral\\document\\focre\\poslink_full_integration_.net_standard_v2.01.00_20250110\\samples\\.netframeworkdemo\\poslinkfullintegrationdemo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{277A04FF-C26C-44A6-BFF0-0F12B31B4388}|POSLinkFullIntegrationDemo\\POSLinkFullIntegrationDemo.csproj|solutionrelative:poslinkfullintegrationdemo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d8444882-b4f5-4533-8e96-e2582560a2d7}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\.NetFrameworkDemo\\POSLinkFullIntegrationDemo\\Form1.cs",
+              "RelativeDocumentMoniker": "POSLinkFullIntegrationDemo\\Form1.cs",
+              "ToolTip": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\.NetFrameworkDemo\\POSLinkFullIntegrationDemo\\Form1.cs",
+              "RelativeToolTip": "POSLinkFullIntegrationDemo\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T02:26:37.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\.NetFrameworkDemo\\POSLinkFullIntegrationDemo\\Form1.cs",
+              "RelativeDocumentMoniker": "POSLinkFullIntegrationDemo\\Form1.cs",
+              "ToolTip": "E:\\aimarketingcentral\\Document\\Focre\\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\\Samples\\.NetFrameworkDemo\\POSLinkFullIntegrationDemo\\Form1.cs [Design]",
+              "RelativeToolTip": "POSLinkFullIntegrationDemo\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T02:26:25.701Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

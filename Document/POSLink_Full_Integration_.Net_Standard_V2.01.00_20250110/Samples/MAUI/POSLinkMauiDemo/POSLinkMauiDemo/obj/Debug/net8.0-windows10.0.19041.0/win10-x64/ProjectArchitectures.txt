@@ -1,0 +1,1 @@
+E:\aimarketingcentral\Document\Focre\POSLink_Full_Integration_.Net_Standard_V2.01.00_20250110\Samples\MAUI\POSLinkMauiDemo\POSLinkMauiDemo\POSLinkMauiDemo.csproj;x64

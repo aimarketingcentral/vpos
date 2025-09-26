@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['tak_0',['Tak',['../namespace_p_o_s_link_admin_1_1_const.html#a08c512229625a2fdf1f06bf15489bb8daf6c5dc9e87737f27cbffe323def199af',1,'POSLinkAdmin.Const.Tak()'],['../namespace_p_o_s_link_admin_1_1_const.html#a494f3692909368cb3ef773526a92d2b8af6c5dc9e87737f27cbffe323def199af',1,'POSLinkAdmin.Const.Tak()'],['../namespace_p_o_s_link_admin_1_1_const.html#acf9985432f72b632a543b6c5e40500b3af6c5dc9e87737f27cbffe323def199af',1,'POSLinkAdmin.Const.Tak()']]],
+  ['tdk_1',['Tdk',['../namespace_p_o_s_link_admin_1_1_const.html#a08c512229625a2fdf1f06bf15489bb8da9e73cf5c2c7fba2ab1b3ac533cb37dbe',1,'POSLinkAdmin::Const']]],
+  ['terminal_2',['Terminal',['../namespace_p_o_s_link_admin_1_1_const.html#a019a477c59683b6875e347583e7673e9a514d8a494f087c0d549b9536c2ef3bd9',1,'POSLinkAdmin::Const']]],
+  ['terminalpreference_3',['TerminalPreference',['../namespace_p_o_s_link_admin_1_1_const.html#a28026cf79a3c969739ccfee7a1bf973eae8620007a4b673ed2b6debfcf7a1badc',1,'POSLinkAdmin::Const']]],
+  ['themerchantidisnull_4',['TheMerchantIdIsNull',['../namespace_p_o_s_link_admin_1_1_const.html#a4717a3daf8ff8b436dbc733127bdb7c8aa0faf4254c123103f11c6bcb355437bf',1,'POSLinkAdmin::Const']]],
+  ['threedimensionalbarcode_5',['ThreeDimensionalBarcode',['../namespace_p_o_s_link_admin_1_1_const.html#a62d44e642347bb24755e62c09aedca14a7c21a123bee066e7f8d0758c2f769991',1,'POSLinkAdmin::Const']]],
+  ['time_6',['Time',['../namespace_p_o_s_link_admin_1_1_const.html#a49b78f0de3e3344c13c389242fb3b828aa76d4ef5f3f6a672bbfab2865563e530',1,'POSLinkAdmin::Const']]],
+  ['tokenize_7',['Tokenize',['../namespace_p_o_s_link_admin_1_1_const.html#a7861ad0b4763c62691c3d7b01ec371dcaeb588d5b9a75eb4e30230a4866d7c057',1,'POSLinkAdmin::Const']]],
+  ['topdown_8',['Topdown',['../namespace_p_o_s_link_admin_1_1_const.html#aa83522f19c3ffb38078cd27c925a0da6a9a6338be46ae23399a59323d453a0f9e',1,'POSLinkAdmin::Const']]],
+  ['toreport_9',['ToReport',['../namespace_p_o_s_link_admin_1_1_const.html#a7bc38cd63613ac854774674125a19a3faaf07359892152c8b26c18b0d1772d39f',1,'POSLinkAdmin::Const']]],
+  ['tpk_10',['Tpk',['../namespace_p_o_s_link_admin_1_1_const.html#a08c512229625a2fdf1f06bf15489bb8da48cd2b3e2ee250d12f5eb1c89f0dc530',1,'POSLinkAdmin::Const']]],
+  ['transactionadjustment_11',['TransactionAdjustment',['../namespace_p_o_s_link_admin_1_1_const.html#a7861ad0b4763c62691c3d7b01ec371dca748ff406a5541d3fd5c6eaddd7833185',1,'POSLinkAdmin::Const']]],
+  ['transactionapproved_12',['TransactionApproved',['../namespace_p_o_s_link_full_integration_1_1_const.html#a70d34aff76f100f68a49dddd3a46fc52a6e5de2c66e2400fd99816622e0c5d944',1,'POSLinkFullIntegration::Const']]],
+  ['transactionapprovedonline_13',['TransactionApprovedOnline',['../namespace_p_o_s_link_full_integration_1_1_const.html#adb0ea2ed7757261ca8b2bc60aaa48aefa7d915a4e5c124290e38a630a12ab99a1',1,'POSLinkFullIntegration::Const']]],
+  ['transactiondeclined_14',['TransactionDeclined',['../namespace_p_o_s_link_full_integration_1_1_const.html#a70d34aff76f100f68a49dddd3a46fc52a3b024a12b7ffcc010c00df1785cf2553',1,'POSLinkFullIntegration::Const']]],
+  ['transactiondeclinedonline_15',['TransactionDeclinedOnline',['../namespace_p_o_s_link_full_integration_1_1_const.html#adb0ea2ed7757261ca8b2bc60aaa48aefa5ef9d682b00fbe2e0c720ae4d85247e6',1,'POSLinkFullIntegration::Const']]],
+  ['transactionofflineapproved_16',['TransactionOfflineApproved',['../namespace_p_o_s_link_full_integration_1_1_const.html#a28f8871b397f9cab82f6640209338504a9ffd4dd90ddf149336bfd0594e724d43',1,'POSLinkFullIntegration::Const']]],
+  ['transactionofflinedeclined_17',['TransactionOfflineDeclined',['../namespace_p_o_s_link_full_integration_1_1_const.html#a28f8871b397f9cab82f6640209338504ab6019c90b7e2cf4c6d3516f3d71e4a23',1,'POSLinkFullIntegration::Const']]],
+  ['transactiononlineauthorizationneeded_18',['TransactionOnlineAuthorizationNeeded',['../namespace_p_o_s_link_full_integration_1_1_const.html#a28f8871b397f9cab82f6640209338504a622e75475987d2c734a02aa5fd78ac5a',1,'POSLinkFullIntegration::Const']]],
+  ['transfer_19',['Transfer',['../namespace_p_o_s_link_admin_1_1_const.html#a7861ad0b4763c62691c3d7b01ec371dca6950810f0d2bba97a6f710c7b965b84e',1,'POSLinkAdmin::Const']]],
+  ['twodimensionalbarcode_20',['TwoDimensionalBarcode',['../namespace_p_o_s_link_admin_1_1_const.html#a62d44e642347bb24755e62c09aedca14a27c533e1817bf3bc1943bdc20d6a972d',1,'POSLinkAdmin::Const']]]
+];

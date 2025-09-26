@@ -1,0 +1,35 @@
+/*		
+ * ===========================================================================================
+ * = COPYRIGHT		                  	
+ *          PAX Computer Technology (Shenzhen) Co., Ltd. PROPRIETARY INFORMATION	
+ *   This software is supplied under the terms of a license agreement or nondisclosure 	
+ *   agreement with PAX Computer Technology (Shenzhen) Co., Ltd. and may not be copied or 
+ *   disclosed except in accordance with the terms in that agreement.   		
+ *     Copyright (C) 2023 PAX Computer Technology (Shenzhen) Co., Ltd. All rights reserved.
+ * ===========================================================================================
+ */
+#pragma once
+#include <tchar.h>
+#include <windows.h>
+#include <iostream>
+#include <atlbase.h>
+#include <atlstr.h>
+#include <map>
+#include "..\..\poslinkcore.tlh"
+#include "..\..\poslinkadmin.tlh"
+#include "..\..\poslinkadmin.tlh"
+#include "..\..\pigeon\POSLinkManage.h"
+#include "..\Tools.h"
+
+namespace POSLinkManage{
+    class PluginClearCardBufferRequest
+    {
+    public:
+        PluginClearCardBufferRequest();
+        _ClearCardBufferRequest* set(const std::optional<ManageClearCardBufferRequest>& req);
+        const ManageClearCardBufferRequest* get(_ClearCardBufferRequest* rsp);
+    private:
+        CComPtr<_ClearCardBufferRequest> request;
+        std::optional<ManageClearCardBufferRequest> response;
+    };
+}
