@@ -1,1 +1,0 @@
-The tlb file only use for sample of C++ and delphi.
