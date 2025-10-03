@@ -1,0 +1,3 @@
+C:\Users\anhhu\Downloads\vpos\vpos.Shared\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\anhhu\Downloads\vpos\vpos.Shared\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\anhhu\Downloads\vpos\vpos.Shared\obj\Debug\net9.0\staticwebassets.build.json

@@ -1,0 +1,4 @@
+wwwroot\app.css
+wwwroot\index.html
+C:\Users\anhhu\Downloads\vpos\vpos\wwwroot\app.css
+C:\Users\anhhu\Downloads\vpos\vpos\wwwroot\index.html
