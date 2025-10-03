@@ -1,0 +1,4 @@
+wwwroot\app.css
+wwwroot\index.html
+E:\aimarketingcentral\vpos\vpos\vpos\vpos\wwwroot\app.css
+E:\aimarketingcentral\vpos\vpos\vpos\vpos\wwwroot\index.html

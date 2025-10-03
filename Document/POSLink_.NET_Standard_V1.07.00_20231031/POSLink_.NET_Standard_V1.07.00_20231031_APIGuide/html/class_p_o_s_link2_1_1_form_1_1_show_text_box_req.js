@@ -1,0 +1,27 @@
+var class_p_o_s_link2_1_1_form_1_1_show_text_box_req =
+[
+    [ "ShowTextBoxReq", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a0aba3f92ddd06f8f4ce4b12ed3e70da8", null ],
+    [ "BarcodeData", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#ad17aa6aceff0d50ef7380b3120bfa53d", null ],
+    [ "BarcodeType", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a1ab181b0184c7fe487288316c229d26f", null ],
+    [ "ButtonColor1", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a746576730d6a0dbead8bfce21dcdca44", null ],
+    [ "ButtonColor2", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#af87c26e74f51a85827b90346a94d1bf3", null ],
+    [ "ButtonColor3", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a776d3b86e1a5a7699ebf699b539c2864", null ],
+    [ "ButtonKey1", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a746e6ac369fb354bea0143d59299c504", null ],
+    [ "ButtonKey2", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a5ff86b1a67c2cce0079ad55cf183dce3", null ],
+    [ "ButtonKey3", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a7a6bb9dc9c1fdd5479c30c8baec0ed60", null ],
+    [ "ButtonName1", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#ac6d6bb8bc9feac58ffe41ca19c10f163", null ],
+    [ "ButtonName2", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#ab8f1cc3a41fff52a6a6f0c2c1b511eb1", null ],
+    [ "ButtonName3", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a203198a9e19af23ca15bc163639f7932", null ],
+    [ "ContinuousScreen", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#ad77d1012a6d587e665d89f98cc55d91f", null ],
+    [ "EnableHardKeyOnly", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a9415def9030872b8e27a40280ce010bd", null ],
+    [ "HardKeyList", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a1bec754ef94b63ae63c05f736e784bac", null ],
+    [ "InputText", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a0d91cb08121cc90443fa45c5905ffd34", null ],
+    [ "InputTextTitle", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a66263bf705a13e9b5aebb56d634d3c57", null ],
+    [ "InputType", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#ae8b16dda86269804de6bf3e98590207f", null ],
+    [ "MaxLength", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a0c1c1c74fabcdf220fc1a714df39c798", null ],
+    [ "MinLength", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a3a44f5bd9509bd4039764967908fe7ff", null ],
+    [ "SignatureBox", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a09a20e0f276cd83a0ff4df8c0997bd06", null ],
+    [ "Text", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a6d1f9f41dc33184daf576c0d64d90460", null ],
+    [ "Timeout", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a4d3bdb0ce8d217e71d7eb02cbb11d73f", null ],
+    [ "Title", "class_p_o_s_link2_1_1_form_1_1_show_text_box_req.html#a27a96ba7756aa7a7c9d75d24a13e1299", null ]
+];
